@@ -1,0 +1,1 @@
+git rm --cached --ignore-unmatch jmdict-eng-3.6.1.json

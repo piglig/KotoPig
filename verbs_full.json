@@ -1,0 +1,1603 @@
+[
+  {
+    "verb": "会う",
+    "reading": "あう",
+    "meaning": "to meet",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "会う",
+      "nai_form": "会わない",
+      "masu_form": "会います",
+      "te_form": "会って",
+      "past_form": "会った",
+      "potential_form": "会える",
+      "passive_form": "会われる",
+      "causative_form": "会わせる",
+      "imperative_form": "会え",
+      "volitional_form": "会おう",
+      "ba_form": "会えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "開く",
+    "reading": "あく",
+    "meaning": "to open",
+    "jlpt_level": "N4",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "開く",
+      "nai_form": "開かない",
+      "masu_form": "開きます",
+      "te_form": "開いて",
+      "past_form": "開いた",
+      "potential_form": "開ける",
+      "passive_form": "開かれる",
+      "causative_form": "開かせる",
+      "imperative_form": "開け",
+      "volitional_form": "開こう",
+      "ba_form": "開けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "遊ぶ",
+    "reading": "あそぶ",
+    "meaning": "to play",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "遊ぶ",
+      "nai_form": "遊ばない",
+      "masu_form": "遊びます",
+      "te_form": "遊んで",
+      "past_form": "遊んだ",
+      "potential_form": "遊べる",
+      "passive_form": "遊ばれる",
+      "causative_form": "遊ばせる",
+      "imperative_form": "遊べ",
+      "volitional_form": "遊ぼう",
+      "ba_form": "遊べば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "浴びる",
+    "reading": "あびる",
+    "meaning": "to bathe, to shower",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "浴びる",
+      "nai_form": "浴びない",
+      "masu_form": "浴びます",
+      "te_form": "浴びて",
+      "past_form": "浴びた",
+      "potential_form": "浴びられる",
+      "passive_form": "浴びられる",
+      "causative_form": "浴びさせる",
+      "imperative_form": "浴びろ",
+      "volitional_form": "浴びよう",
+      "ba_form": "浴びれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "洗う",
+    "reading": "あらう",
+    "meaning": "to wash",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "洗う",
+      "nai_form": "洗わない",
+      "masu_form": "洗います",
+      "te_form": "洗って",
+      "past_form": "洗った",
+      "potential_form": "洗える",
+      "passive_form": "洗われる",
+      "causative_form": "洗わせる",
+      "imperative_form": "洗え",
+      "volitional_form": "洗おう",
+      "ba_form": "洗えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "ある",
+    "reading": "ある",
+    "meaning": "to be, to exist",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "ある",
+      "nai_form": "ない",
+      "masu_form": "あります",
+      "te_form": "あって",
+      "past_form": "あった",
+      "imperative_form": "あれ",
+      "volitional_form": "あろう",
+      "ba_form": "あれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "歩く",
+    "reading": "あるく",
+    "meaning": "to walk",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "歩く",
+      "nai_form": "歩かない",
+      "masu_form": "歩きます",
+      "te_form": "歩いて",
+      "past_form": "歩いた",
+      "potential_form": "歩ける",
+      "passive_form": "歩かれる",
+      "causative_form": "歩かせる",
+      "imperative_form": "歩け",
+      "volitional_form": "歩こう",
+      "ba_form": "歩けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "言う",
+    "reading": "いう",
+    "meaning": "to say",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "言う",
+      "nai_form": "言わない",
+      "masu_form": "言います",
+      "te_form": "言って",
+      "past_form": "言った",
+      "potential_form": "言える",
+      "passive_form": "言われる",
+      "causative_form": "言わせる",
+      "imperative_form": "言え",
+      "volitional_form": "言おう",
+      "ba_form": "言えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "行く",
+    "reading": "いく",
+    "meaning": "to go",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "行く",
+      "nai_form": "行かない",
+      "masu_form": "行きます",
+      "te_form": "行って",
+      "past_form": "行った",
+      "potential_form": "行ける",
+      "passive_form": "行かれる",
+      "causative_form": "行かせる",
+      "imperative_form": "行け",
+      "volitional_form": "行こう",
+      "ba_form": "行けば"
+    },
+    "examples": [
+      {
+        "japanese": "週末、京都へ行きます。",
+        "reading": "しゅうまつ、きょうとへいきます。",
+        "translation": "周末去京都。"
+      }
+    ]
+  },
+  {
+    "verb": "要る",
+    "reading": "いる",
+    "meaning": "to need",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "要る",
+      "nai_form": "要らない",
+      "masu_form": "要ります",
+      "te_form": "要って",
+      "past_form": "要った",
+      "ba_form": "要れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "入れる",
+    "reading": "いれる",
+    "meaning": "to put in",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "入れる",
+      "nai_form": "入れない",
+      "masu_form": "入れます",
+      "te_form": "入れて",
+      "past_form": "入れた",
+      "potential_form": "入れられる",
+      "passive_form": "入れられる",
+      "causative_form": "入れさせる",
+      "imperative_form": "入れろ",
+      "volitional_form": "入れよう",
+      "ba_form": "入れれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "歌う",
+    "reading": "うたう",
+    "meaning": "to sing",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "歌う",
+      "nai_form": "歌わない",
+      "masu_form": "歌います",
+      "te_form": "歌って",
+      "past_form": "歌った",
+      "potential_form": "歌える",
+      "passive_form": "歌われる",
+      "causative_form": "歌わせる",
+      "imperative_form": "歌え",
+      "volitional_form": "歌おう",
+      "ba_form": "歌えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "生まれる",
+    "reading": "うまれる",
+    "meaning": "to be born",
+    "jlpt_level": "N4",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "生まれる",
+      "nai_form": "生まれない",
+      "masu_form": "生まれます",
+      "te_form": "生まれて",
+      "past_form": "生まれた",
+      "ba_form": "生まれれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "売る",
+    "reading": "うる",
+    "meaning": "to sell",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "売る",
+      "nai_form": "売らない",
+      "masu_form": "売ります",
+      "te_form": "売って",
+      "past_form": "売った",
+      "potential_form": "売れる",
+      "passive_form": "売られる",
+      "causative_form": "売らせる",
+      "imperative_form": "売れ",
+      "volitional_form": "売ろう",
+      "ba_form": "売れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "起きる",
+    "reading": "おきる",
+    "meaning": "to get up",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "起きる",
+      "nai_form": "起きない",
+      "masu_form": "起きます",
+      "te_form": "起きて",
+      "past_form": "起きた",
+      "potential_form": "起きられる",
+      "passive_form": "起きられる",
+      "causative_form": "起きさせる",
+      "imperative_form": "起きろ",
+      "volitional_form": "起きよう",
+      "ba_form": "起きれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "置く",
+    "reading": "おく",
+    "meaning": "to put",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "置く",
+      "nai_form": "置かない",
+      "masu_form": "置きます",
+      "te_form": "置いて",
+      "past_form": "置いた",
+      "potential_form": "置ける",
+      "passive_form": "置かれる",
+      "causative_form": "置かせる",
+      "imperative_form": "置け",
+      "volitional_form": "置こう",
+      "ba_form": "置けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "教える",
+    "reading": "おしえる",
+    "meaning": "to teach",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "教える",
+      "nai_form": "教えない",
+      "masu_form": "教えます",
+      "te_form": "教えて",
+      "past_form": "教えた",
+      "potential_form": "教えられる",
+      "passive_form": "教えられる",
+      "causative_form": "教えさせる",
+      "imperative_form": "教えろ",
+      "volitional_form": "教えよう",
+      "ba_form": "教えれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "押す",
+    "reading": "おす",
+    "meaning": "to push",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "押す",
+      "nai_form": "押さない",
+      "masu_form": "押します",
+      "te_form": "押して",
+      "past_form": "押した",
+      "potential_form": "押せる",
+      "passive_form": "押される",
+      "causative_form": "押させる",
+      "imperative_form": "押せ",
+      "volitional_form": "押そう",
+      "ba_form": "押せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "覚える",
+    "reading": "おぼえる",
+    "meaning": "to remember",
+    "jlpt_level": "N4",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "覚える",
+      "nai_form": "覚えない",
+      "masu_form": "覚えます",
+      "te_form": "覚えて",
+      "past_form": "覚えた",
+      "potential_form": "覚えられる",
+      "passive_form": "覚えられる",
+      "causative_form": "覚えさせる",
+      "imperative_form": "覚えろ",
+      "volitional_form": "覚えよう",
+      "ba_form": "覚えれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "泳ぐ",
+    "reading": "およぐ",
+    "meaning": "to swim",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "泳ぐ",
+      "nai_form": "泳がない",
+      "masu_form": "泳ぎます",
+      "te_form": "泳いで",
+      "past_form": "泳いだ",
+      "potential_form": "泳げる",
+      "passive_form": "泳がれる",
+      "causative_form": "泳がせる",
+      "imperative_form": "泳げ",
+      "volitional_form": "泳ごう",
+      "ba_form": "泳げば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "降りる",
+    "reading": "おりる",
+    "meaning": "to get off",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "降りる",
+      "nai_form": "降りない",
+      "masu_form": "降ります",
+      "te_form": "降りて",
+      "past_form": "降りた",
+      "potential_form": "降りられる",
+      "passive_form": "降りられる",
+      "causative_form": "降りさせる",
+      "imperative_form": "降りろ",
+      "volitional_form": "降りよう",
+      "ba_form": "降りれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "終わる",
+    "reading": "おわる",
+    "meaning": "to end",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "終わる",
+      "nai_form": "終わらない",
+      "masu_form": "終わります",
+      "te_form": "終わって",
+      "past_form": "終わった",
+      "ba_form": "終われば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "買う",
+    "reading": "かう",
+    "meaning": "to buy",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "買う",
+      "nai_form": "買わない",
+      "masu_form": "買います",
+      "te_form": "買って",
+      "past_form": "買った",
+      "potential_form": "買える",
+      "passive_form": "買われる",
+      "causative_form": "買わせる",
+      "imperative_form": "買え",
+      "volitional_form": "買おう",
+      "ba_form": "買えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "返す",
+    "reading": "かえす",
+    "meaning": "to return (something)",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "返す",
+      "nai_form": "返さない",
+      "masu_form": "返します",
+      "te_form": "返して",
+      "past_form": "返した",
+      "potential_form": "返せる",
+      "passive_form": "返される",
+      "causative_form": "返させる",
+      "imperative_form": "返せ",
+      "volitional_form": "返そう",
+      "ba_form": "返せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "帰る",
+    "reading": "かえる",
+    "meaning": "to go home",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "帰る",
+      "nai_form": "帰らない",
+      "masu_form": "帰ります",
+      "te_form": "帰って",
+      "past_form": "帰った",
+      "potential_form": "帰れる",
+      "passive_form": "帰られる",
+      "causative_form": "帰らせる",
+      "imperative_form": "帰れ",
+      "volitional_form": "帰ろう",
+      "ba_form": "帰れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "書く",
+    "reading": "かく",
+    "meaning": "to write",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "書く",
+      "nai_form": "書かない",
+      "masu_form": "書きます",
+      "te_form": "書いて",
+      "past_form": "書いた",
+      "potential_form": "書ける",
+      "passive_form": "書かれる",
+      "causative_form": "書かせる",
+      "imperative_form": "書け",
+      "volitional_form": "書こう",
+      "ba_form": "書けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "かける",
+    "reading": "かける",
+    "meaning": "to call (by phone)",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "かける",
+      "nai_form": "かけない",
+      "masu_form": "かけます",
+      "te_form": "かけて",
+      "past_form": "かけた",
+      "potential_form": "かけられる",
+      "passive_form": "かけられる",
+      "causative_form": "かけさせる",
+      "imperative_form": "かけろ",
+      "volitional_form": "かけよう",
+      "ba_form": "かければ"
+    },
+    "examples": []
+  },
+  {
+    "verb": "貸す",
+    "reading": "かす",
+    "meaning": "to lend",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "貸す",
+      "nai_form": "貸さない",
+      "masu_form": "貸します",
+      "te_form": "貸して",
+      "past_form": "貸した",
+      "potential_form": "貸せる",
+      "passive_form": "貸される",
+      "causative_form": "貸させる",
+      "imperative_form": "貸せ",
+      "volitional_form": "貸そう",
+      "ba_form": "貸せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "借りる",
+    "reading": "かりる",
+    "meaning": "to borrow",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "借りる",
+      "nai_form": "借りない",
+      "masu_form": "借ります",
+      "te_form": "借りて",
+      "past_form": "借りた",
+      "potential_form": "借りられる",
+      "passive_form": "借りられる",
+      "causative_form": "借りさせる",
+      "imperative_form": "借りろ",
+      "volitional_form": "借りよう",
+      "ba_form": "借りれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "消える",
+    "reading": "きえる",
+    "meaning": "to disappear",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "消える",
+      "nai_form": "消えない",
+      "masu_form": "消えます",
+      "te_form": "消えて",
+      "past_form": "消えた",
+      "ba_form": "消えれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "聞く",
+    "reading": "きく",
+    "meaning": "to listen, to ask",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "聞く",
+      "nai_form": "聞かない",
+      "masu_form": "聞きます",
+      "te_form": "聞いて",
+      "past_form": "聞いた",
+      "potential_form": "聞ける",
+      "passive_form": "聞かれる",
+      "causative_form": "聞かせる",
+      "imperative_form": "聞け",
+      "volitional_form": "聞こう",
+      "ba_form": "聞けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "切る",
+    "reading": "きる",
+    "meaning": "to cut",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "切る",
+      "nai_form": "切らない",
+      "masu_form": "切ります",
+      "te_form": "切って",
+      "past_form": "切った",
+      "potential_form": "切れる",
+      "passive_form": "切られる",
+      "causative_form": "切らせる",
+      "imperative_form": "切れ",
+      "volitional_form": "切ろう",
+      "ba_form": "切れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "着る",
+    "reading": "きる",
+    "meaning": "to wear",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "着る",
+      "nai_form": "着ない",
+      "masu_form": "着ます",
+      "te_form": "着て",
+      "past_form": "着た",
+      "potential_form": "着られる",
+      "passive_form": "着られる",
+      "causative_form": "着させる",
+      "imperative_form": "着ろ",
+      "volitional_form": "着よう",
+      "ba_form": "着れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "来る",
+    "reading": "くる",
+    "meaning": "to come",
+    "jlpt_level": "N5",
+    "group": "kuru",
+    "forms": {
+      "dictionary_form": "来る",
+      "nai_form": "来ない",
+      "masu_form": "来ます",
+      "te_form": "来て",
+      "past_form": "来た",
+      "potential_form": "来られる",
+      "passive_form": "来られる",
+      "causative_form": "来させる",
+      "imperative_form": "来い",
+      "volitional_form": "来よう",
+      "ba_form": "来れば"
+    },
+    "examples": [
+      {
+        "japanese": "明日、友達が来ます。",
+        "reading": "あした、ともだちがきます。",
+        "translation": "明天朋友要来。"
+      }
+    ]
+  },
+  {
+    "verb": "消す",
+    "reading": "けす",
+    "meaning": "to turn off, to erase",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "消す",
+      "nai_form": "消さない",
+      "masu_form": "消します",
+      "te_form": "消して",
+      "past_form": "消した",
+      "potential_form": "消せる",
+      "passive_form": "消される",
+      "causative_form": "消させる",
+      "imperative_form": "消せ",
+      "volitional_form": "消そう",
+      "ba_form": "消せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "答える",
+    "reading": "こたえる",
+    "meaning": "to answer",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "答える",
+      "nai_form": "答えない",
+      "masu_form": "答えます",
+      "te_form": "答えて",
+      "past_form": "答えた",
+      "potential_form": "答えられる",
+      "passive_form": "答えられる",
+      "causative_form": "答えさせる",
+      "imperative_form": "答えろ",
+      "volitional_form": "答えよう",
+      "ba_form": "答えれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "知る",
+    "reading": "しる",
+    "meaning": "to know",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "知る",
+      "nai_form": "知らない",
+      "masu_form": "知ります",
+      "te_form": "知って",
+      "past_form": "知った",
+      "potential_form": "知れる",
+      "passive_form": "知られる",
+      "causative_form": "知らせる",
+      "imperative_form": "知れ",
+      "volitional_form": "知ろう",
+      "ba_form": "知れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "する",
+    "reading": "する",
+    "meaning": "to do",
+    "jlpt_level": "N5",
+    "group": "suru",
+    "forms": {
+      "dictionary_form": "する",
+      "nai_form": "しない",
+      "masu_form": "します",
+      "te_form": "して",
+      "past_form": "した",
+      "potential_form": "できる",
+      "passive_form": "される",
+      "causative_form": "させる",
+      "imperative_form": "しろ",
+      "volitional_form": "しよう",
+      "ba_form": "すれば"
+    },
+    "examples": [
+      {
+        "japanese": "宿題をします。",
+        "reading": "しゅくだいをします。",
+        "translation": "做作业。"
+      }
+    ]
+  },
+  {
+    "verb": "住む",
+    "reading": "すむ",
+    "meaning": "to live (in a place)",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "住む",
+      "nai_form": "住まない",
+      "masu_form": "住みます",
+      "te_form": "住んで",
+      "past_form": "住んだ",
+      "potential_form": "住める",
+      "passive_form": "住まれる",
+      "causative_form": "住ませる",
+      "imperative_form": "住め",
+      "volitional_form": "住もう",
+      "ba_form": "住めば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "座る",
+    "reading": "すわる",
+    "meaning": "to sit",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "座る",
+      "nai_form": "座らない",
+      "masu_form": "座ります",
+      "te_form": "座って",
+      "past_form": "座った",
+      "potential_form": "座れる",
+      "passive_form": "座られる",
+      "causative_form": "座らせる",
+      "imperative_form": "座れ",
+      "volitional_form": "座ろう",
+      "ba_form": "座れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "出す",
+    "reading": "だす",
+    "meaning": "to take out, to submit",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "出す",
+      "nai_form": "出さない",
+      "masu_form": "出します",
+      "te_form": "出して",
+      "past_form": "出した",
+      "potential_form": "出せる",
+      "passive_form": "出される",
+      "causative_form": "出させる",
+      "imperative_form": "出せ",
+      "volitional_form": "出そう",
+      "ba_form": "出せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "立つ",
+    "reading": "たつ",
+    "meaning": "to stand",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "立つ",
+      "nai_form": "立たない",
+      "masu_form": "立ちます",
+      "te_form": "立って",
+      "past_form": "立った",
+      "potential_form": "立てる",
+      "passive_form": "立たれる",
+      "causative_form": "立たせる",
+      "imperative_form": "立て",
+      "volitional_form": "立とう",
+      "ba_form": "立てば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "食べる",
+    "reading": "たべる",
+    "meaning": "to eat",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "食べる",
+      "nai_form": "食べない",
+      "masu_form": "食べます",
+      "te_form": "食べて",
+      "past_form": "食べた",
+      "potential_form": "食べられる",
+      "passive_form": "食べられる",
+      "causative_form": "食べさせる",
+      "imperative_form": "食べろ",
+      "volitional_form": "食べよう",
+      "ba_form": "食べれば"
+    },
+    "examples": [
+      {
+        "japanese": "毎日、日本語を勉強します。",
+        "reading": "まいにち、にほんごをべんきょうします。",
+        "translation": "我每天学习日语。"
+      }
+    ]
+  },
+  {
+    "verb": "違う",
+    "reading": "ちがう",
+    "meaning": "to be different",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "違う",
+      "nai_form": "違わない",
+      "masu_form": "違います",
+      "te_form": "違って",
+      "past_form": "違った",
+      "ba_form": "違えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "使う",
+    "reading": "つかう",
+    "meaning": "to use",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "使う",
+      "nai_form": "使わない",
+      "masu_form": "使います",
+      "te_form": "使って",
+      "past_form": "使った",
+      "potential_form": "使える",
+      "passive_form": "使われる",
+      "causative_form": "使わせる",
+      "imperative_form": "使え",
+      "volitional_form": "使おう",
+      "ba_form": "使えば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "疲れる",
+    "reading": "つかれる",
+    "meaning": "to get tired",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "疲れる",
+      "nai_form": "疲れない",
+      "masu_form": "疲れます",
+      "te_form": "疲れて",
+      "past_form": "疲れた",
+      "ba_form": "疲れれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "着く",
+    "reading": "つく",
+    "meaning": "to arrive",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "着く",
+      "nai_form": "着かない",
+      "masu_form": "着きます",
+      "te_form": "着いて",
+      "past_form": "着いた",
+      "potential_form": "着ける",
+      "passive_form": "着かれる",
+      "causative_form": "着かせる",
+      "imperative_form": "着け",
+      "volitional_form": "着こう",
+      "ba_form": "着けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "作る",
+    "reading": "つくる",
+    "meaning": "to make",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "作る",
+      "nai_form": "作らない",
+      "masu_form": "作ります",
+      "te_form": "作って",
+      "past_form": "作った",
+      "potential_form": "作れる",
+      "passive_form": "作られる",
+      "causative_form": "作らせる",
+      "imperative_form": "作れ",
+      "volitional_form": "作ろう",
+      "ba_form": "作れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "出る",
+    "reading": "でる",
+    "meaning": "to go out, to leave",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "出る",
+      "nai_form": "出ない",
+      "masu_form": "出ます",
+      "te_form": "出て",
+      "past_form": "出た",
+      "potential_form": "出られる",
+      "passive_form": "出られる",
+      "causative_form": "出させる",
+      "imperative_form": "出ろ",
+      "volitional_form": "出よう",
+      "ba_form": "出れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "飛ぶ",
+    "reading": "とぶ",
+    "meaning": "to fly",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "飛ぶ",
+      "nai_form": "飛ばない",
+      "masu_form": "飛びます",
+      "te_form": "飛んで",
+      "past_form": "飛んだ",
+      "potential_form": "飛べる",
+      "passive_form": "飛ばれる",
+      "causative_form": "飛ばせる",
+      "imperative_form": "飛べ",
+      "volitional_form": "飛ぼう",
+      "ba_form": "飛べば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "止まる",
+    "reading": "とまる",
+    "meaning": "to stop",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "止まる",
+      "nai_form": "止まらない",
+      "masu_form": "止まります",
+      "te_form": "止まって",
+      "past_form": "止まった",
+      "ba_form": "止まれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "取る",
+    "reading": "とる",
+    "meaning": "to take",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "取る",
+      "nai_form": "取らない",
+      "masu_form": "取ります",
+      "te_form": "取って",
+      "past_form": "取った",
+      "potential_form": "取れる",
+      "passive_form": "取られる",
+      "causative_form": "取らせる",
+      "imperative_form": "取れ",
+      "volitional_form": "取ろう",
+      "ba_form": "取れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "直す",
+    "reading": "なおす",
+    "meaning": "to fix, to repair",
+    "jlpt_level": "N4",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "直す",
+      "nai_form": "直さない",
+      "masu_form": "直します",
+      "te_form": "直して",
+      "past_form": "直した",
+      "potential_form": "直せる",
+      "passive_form": "直される",
+      "causative_form": "直させる",
+      "imperative_form": "直せ",
+      "volitional_form": "直そう",
+      "ba_form": "直せば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "泣く",
+    "reading": "なく",
+    "meaning": "to cry",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "泣く",
+      "nai_form": "泣かない",
+      "masu_form": "泣きます",
+      "te_form": "泣いて",
+      "past_form": "泣いた",
+      "potential_form": "泣ける",
+      "passive_form": "泣かれる",
+      "causative_form": "泣かせる",
+      "imperative_form": "泣け",
+      "volitional_form": "泣こう",
+      "ba_form": "泣けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "並ぶ",
+    "reading": "ならぶ",
+    "meaning": "to line up",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "並ぶ",
+      "nai_form": "並ばない",
+      "masu_form": "並びます",
+      "te_form": "並んで",
+      "past_form": "並んだ",
+      "ba_form": "並べば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "なる",
+    "reading": "なる",
+    "meaning": "to become",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "なる",
+      "nai_form": "ならない",
+      "masu_form": "なります",
+      "te_form": "なって",
+      "past_form": "なった",
+      "potential_form": "なれる",
+      "passive_form": "なられる",
+      "causative_form": "ならせる",
+      "imperative_form": "なれ",
+      "volitional_form": "なろう",
+      "ba_form": "なれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "寝る",
+    "reading": "ねる",
+    "meaning": "to sleep",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "寝る",
+      "nai_form": "寝ない",
+      "masu_form": "寝ます",
+      "te_form": "寝て",
+      "past_form": "寝た",
+      "potential_form": "寝られる",
+      "passive_form": "寝られる",
+      "causative_form": "寝させる",
+      "imperative_form": "寝ろ",
+      "volitional_form": "寝よう",
+      "ba_form": "寝れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "登る",
+    "reading": "のぼる",
+    "meaning": "to climb",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "登る",
+      "nai_form": "登らない",
+      "masu_form": "登ります",
+      "te_form": "登って",
+      "past_form": "登った",
+      "potential_form": "登れる",
+      "passive_form": "登られる",
+      "causative_form": "登らせる",
+      "imperative_form": "登れ",
+      "volitional_form": "登ろう",
+      "ba_form": "登れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "飲む",
+    "reading": "のむ",
+    "meaning": "to drink",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "飲む",
+      "nai_form": "飲まない",
+      "masu_form": "飲みます",
+      "te_form": "飲んで",
+      "past_form": "飲んだ",
+      "potential_form": "飲める",
+      "passive_form": "飲まれる",
+      "causative_form": "飲ませる",
+      "imperative_form": "飲め",
+      "volitional_form": "飲もう",
+      "ba_form": "飲めば"
+    },
+    "examples": [
+      {
+        "japanese": "水を飲みます。",
+        "reading": "みずをのみます。",
+        "translation": "喝水。"
+      }
+    ]
+  },
+  {
+    "verb": "乗る",
+    "reading": "のる",
+    "meaning": "to ride",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "乗る",
+      "nai_form": "乗らない",
+      "masu_form": "乗ります",
+      "te_form": "乗って",
+      "past_form": "乗った",
+      "potential_form": "乗れる",
+      "passive_form": "乗られる",
+      "causative_form": "乗らせる",
+      "imperative_form": "乗れ",
+      "volitional_form": "乗ろう",
+      "ba_form": "乗れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "入る",
+    "reading": "はいる",
+    "meaning": "to enter",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "入る",
+      "nai_form": "入らない",
+      "masu_form": "入ります",
+      "te_form": "入って",
+      "past_form": "入った",
+      "potential_form": "入れる",
+      "passive_form": "入られる",
+      "causative_form": "入らせる",
+      "imperative_form": "入れ",
+      "volitional_form": "入ろう",
+      "ba_form": "入れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "始まる",
+    "reading": "はじまる",
+    "meaning": "to begin",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "始まる",
+      "nai_form": "始まらない",
+      "masu_form": "始まります",
+      "te_form": "始まって",
+      "past_form": "始まった",
+      "ba_form": "始まれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "働く",
+    "reading": "はたらく",
+    "meaning": "to work",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "働く",
+      "nai_form": "働かない",
+      "masu_form": "働きます",
+      "te_form": "働いて",
+      "past_form": "働いた",
+      "potential_form": "働ける",
+      "passive_form": "働かれる",
+      "causative_form": "働かせる",
+      "imperative_form": "働け",
+      "volitional_form": "働こう",
+      "ba_form": "働けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "話す",
+    "reading": "はなす",
+    "meaning": "to speak",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "話す",
+      "nai_form": "話さない",
+      "masu_form": "話します",
+      "te_form": "話して",
+      "past_form": "話した",
+      "potential_form": "話せる",
+      "passive_form": "話される",
+      "causative_form": "話させる",
+      "imperative_form": "話せ",
+      "volitional_form": "話そう",
+      "ba_form": "話せば"
+    },
+    "examples": [
+      {
+        "japanese": "彼は英語を上手に話します。",
+        "reading": "かれはえいごをじょうずにはなします。",
+        "translation": "他英语说得很好。"
+      }
+    ]
+  },
+  {
+    "verb": "引く",
+    "reading": "ひく",
+    "meaning": "to pull",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "引く",
+      "nai_form": "引かない",
+      "masu_form": "引きます",
+      "te_form": "引いて",
+      "past_form": "引いた",
+      "potential_form": "引ける",
+      "passive_form": "引かれる",
+      "causative_form": "引かせる",
+      "imperative_form": "引け",
+      "volitional_form": "引こう",
+      "ba_form": "引けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "弾く",
+    "reading": "ひく",
+    "meaning": "to play (a string instrument)",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "弾く",
+      "nai_form": "弾かない",
+      "masu_form": "弾きます",
+      "te_form": "弾いて",
+      "past_form": "弾いた",
+      "potential_form": "弾ける",
+      "passive_form": "弾かれる",
+      "causative_form": "弾かせる",
+      "imperative_form": "弾け",
+      "volitional_form": "弾こう",
+      "ba_form": "弾けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "降る",
+    "reading": "ふる",
+    "meaning": "to fall (rain, snow)",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "降る",
+      "nai_form": "降らない",
+      "masu_form": "降ります",
+      "te_form": "降って",
+      "past_form": "降った",
+      "ba_form": "降れば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "待つ",
+    "reading": "まつ",
+    "meaning": "to wait",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "待つ",
+      "nai_form": "待たない",
+      "masu_form": "待ちます",
+      "te_form": "待って",
+      "past_form": "待った",
+      "potential_form": "待てる",
+      "passive_form": "待たれる",
+      "causative_form": "待たせる",
+      "imperative_form": "待て",
+      "volitional_form": "待とう",
+      "ba_form": "待てば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "磨く",
+    "reading": "みがく",
+    "meaning": "to brush (teeth), to polish",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "磨く",
+      "nai_form": "磨かない",
+      "masu_form": "磨きます",
+      "te_form": "磨いて",
+      "past_form": "磨いた",
+      "potential_form": "磨ける",
+      "passive_form": "磨かれる",
+      "causative_form": "磨かせる",
+      "imperative_form": "磨け",
+      "volitional_form": "磨こう",
+      "ba_form": "磨けば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "見る",
+    "reading": "みる",
+    "meaning": "to see",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "見る",
+      "nai_form": "見ない",
+      "masu_form": "見ます",
+      "te_form": "見て",
+      "past_form": "見た",
+      "potential_form": "見られる",
+      "passive_form": "見られる",
+      "causative_form": "見させる",
+      "imperative_form": "見ろ",
+      "volitional_form": "見よう",
+      "ba_form": "見れば"
+    },
+    "examples": [
+      {
+        "japanese": "テレビを見ます。",
+        "reading": "テレビをみます。",
+        "translation": "看电视。"
+      }
+    ]
+  },
+  {
+    "verb": "見せる",
+    "reading": "みせる",
+    "meaning": "to show",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "見せる",
+      "nai_form": "見せない",
+      "masu_form": "見せます",
+      "te_form": "見せて",
+      "past_form": "見せた",
+      "potential_form": "見せられる",
+      "passive_form": "見せられる",
+      "causative_form": "見せさせる",
+      "imperative_form": "見せろ",
+      "volitional_form": "見せよう",
+      "ba_form": "見せれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "持つ",
+    "reading": "もつ",
+    "meaning": "to hold",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "持つ",
+      "nai_form": "持たない",
+      "masu_form": "持ちます",
+      "te_form": "持って",
+      "past_form": "持った",
+      "potential_form": "持てる",
+      "passive_form": "持たれる",
+      "causative_form": "持たせる",
+      "imperative_form": "持て",
+      "volitional_form": "持とう",
+      "ba_form": "持てば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "休む",
+    "reading": "やすむ",
+    "meaning": "to rest",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "休む",
+      "nai_form": "休まない",
+      "masu_form": "休みます",
+      "te_form": "休んで",
+      "past_form": "休んだ",
+      "potential_form": "休める",
+      "passive_form": "休まれる",
+      "causative_form": "休ませる",
+      "imperative_form": "休め",
+      "volitional_form": "休もう",
+      "ba_form": "休めば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "呼ぶ",
+    "reading": "よぶ",
+    "meaning": "to call out",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "呼ぶ",
+      "nai_form": "呼ばない",
+      "masu_form": "呼びます",
+      "te_form": "呼んで",
+      "past_form": "呼んだ",
+      "potential_form": "呼べる",
+      "passive_form": "呼ばれる",
+      "causative_form": "呼ばせる",
+      "imperative_form": "呼べ",
+      "volitional_form": "呼ぼう",
+      "ba_form": "呼べば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "読む",
+    "reading": "よむ",
+    "meaning": "to read",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "読む",
+      "nai_form": "読まない",
+      "masu_form": "読みます",
+      "te_form": "読んで",
+      "past_form": "読んだ",
+      "potential_form": "読める",
+      "passive_form": "読まれる",
+      "causative_form": "読ませる",
+      "imperative_form": "読め",
+      "volitional_form": "読もう",
+      "ba_form": "読めば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "分かる",
+    "reading": "わかる",
+    "meaning": "to understand",
+    "jlpt_level": "N5",
+    "group": "godan",
+    "forms": {
+      "dictionary_form": "分かる",
+      "nai_form": "分からない",
+      "masu_form": "分かります",
+      "te_form": "分かって",
+      "past_form": "分かった",
+      "ba_form": "分かれば"
+    },
+    "examples": []
+  },
+  {
+    "verb": "忘れる",
+    "reading": "わすれる",
+    "meaning": "to forget",
+    "jlpt_level": "N5",
+    "group": "ichidan",
+    "forms": {
+      "dictionary_form": "忘れる",
+      "nai_form": "忘れない",
+      "masu_form": "忘れます",
+      "te_form": "忘れて",
+      "past_form": "忘れた",
+      "potential_form": "忘れられる",
+      "passive_form": "忘れられる",
+      "causative_form": "忘れさせる",
+      "imperative_form": "忘れろ",
+      "volitional_form": "忘れよう",
+      "ba_form": "忘れれば"
+    },
+    "examples": []
+  }
+]
