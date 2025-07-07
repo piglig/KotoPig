@@ -69,13 +69,16 @@ const WordCloud = ({ words, onSelectWord }) => {
         const element = scope.current.querySelector(`[data-word-id="${id}"]`);
         console.log('WordCloud: Attempting to animate word:', newWord.word.word, 'Element found:', !!element, 'offsetWidth:', element ? element.offsetWidth : 'N/A');
         if (element) {
+          console.log('DEBUG: containerSize.width:', containerSize.width);
+          console.log('DEBUG: element.offsetWidth:', element.offsetWidth);
+          console.log('DEBUG: Animation target x:', -element.offsetWidth - 200);
           // Initial setup for rotation
           animate(element, { rotate: rotation }, { duration: 0 });
 
           // X-axis movement and opacity (single pass)
           animate(element,
             {
-              x: [containerSize.width, -element.offsetWidth - 200], // Move from right to left, fully off-screen
+              x: [0, -containerSize.width - element.offsetWidth], // Move from right to left, fully off-screen
               opacity: [0, 1, 0], // Fade in, stay, fade out at the very end
             },
             {
@@ -106,7 +109,7 @@ const WordCloud = ({ words, onSelectWord }) => {
         } else {
           console.warn('WordCloud: Element not found for animation:', newWord.word.word);
         }
-      }, 100); // Increased delay to 100ms
+      }, 500); // Increased delay to 500ms to allow element to render and get offsetWidth
     };
 
     const interval = setInterval(generateWord, Math.random() * 1000 + 500); // Generate new word every 0.5s to 1.5s
