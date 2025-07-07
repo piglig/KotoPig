@@ -41,7 +41,7 @@ const WordCloud = ({ words, onSelectWord }) => {
       wordCounter++;
 
       const id = `${wordData.word}-${Date.now()}`;
-      const fontSize = Math.random() * (2.5 - 1.0) + 1.0; // 1.0em to 2.5em
+      const fontSize = Math.random() * (3.0 - 1.5) + 1.5; // 1.5em to 3.0em for better readability
       const rotation = Math.random() * 20 - 10; // -10deg to 10deg
       const startY = Math.random() * (containerSize.height - 50); // Random Y position within container
       const duration = (Math.random() * 60 + 30); // 30s to 90s for X movement
@@ -79,12 +79,12 @@ const WordCloud = ({ words, onSelectWord }) => {
           animate(element,
             {
               x: [0, -containerSize.width - element.offsetWidth], // Move from right to left, fully off-screen
-              opacity: [0, 1, 0], // Fade in, stay, fade out at the very end
+              opacity: [0, 0.5, 1, 0.3, 0], // Fade in, brightest in middle, fade out
             },
             {
               duration: duration,
               ease: "linear",
-              times: [0, 0.01, 1], // Fade in very quickly, stay visible until the very end, then fade out
+              times: [0, 0.1, 0.5, 0.9, 1], // Fade in quickly, brightest at 50% of journey, fade out
               onComplete: () => {
                 // Remove word from activeWords after it leaves screen
                 setActiveWords(prevWords => prevWords.filter(w => w.id !== id));
