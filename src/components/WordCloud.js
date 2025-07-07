@@ -66,7 +66,12 @@ const WordCloud = ({ words, onSelectWord }) => {
       // We need to wait for the element to be rendered in the DOM
       // before we can animate it. A small timeout can help.
       setTimeout(() => {
-        const element = scope.current.querySelector(`[data-word-id="${id}"]`);
+        const currentScope = scope.current;
+        if (!currentScope) {
+          console.warn('WordCloud: Scope is null, component unmounted before animation could start.');
+          return; // Component unmounted, do not proceed
+        }
+        const element = currentScope.querySelector(`[data-word-id="${id}"]`);
         console.log('WordCloud: Attempting to animate word:', newWord.word.word, 'Element found:', !!element, 'offsetWidth:', element ? element.offsetWidth : 'N/A');
         if (element) {
           console.log('DEBUG: containerSize.width:', containerSize.width);
