@@ -76,9 +76,9 @@ const WordList = () => {
 
   return (
     <>
-      {/* Search and Filter UI */}
-      <div className="row mb-4 align-items-end">
-        <div className="col-md-5 mb-3 mb-md-0">
+      {/* Search, Filter, Sort UI */}
+      <div className="row mb-3 align-items-end">
+        <div className="col-lg-4 col-md-6 mb-3">
           <label htmlFor="searchTerm" className="form-label visually-hidden">搜索</label>
           <div className="input-group input-group-lg">
             <span className="input-group-text"><i className="bi bi-search"></i></span>
@@ -92,7 +92,7 @@ const WordList = () => {
             />
           </div>
         </div>
-        <div className="col-md-4 mb-3 mb-md-0">
+        <div className="col-lg-3 col-md-6 mb-3">
           <label htmlFor="selectType" className="form-label visually-hidden">筛选类型</label>
           <div className="input-group input-group-lg">
             <span className="input-group-text"><i className="bi bi-tag-fill"></i></span>
@@ -102,7 +102,7 @@ const WordList = () => {
             </select>
           </div>
         </div>
-        <div className="col-md-3 mb-3 mb-md-0">
+        <div className="col-lg-3 col-md-6 mb-3">
           <label htmlFor="sortBy" className="form-label visually-hidden">排序方式</label>
           <div className="input-group input-group-lg">
             <span className="input-group-text"><i className="bi bi-sort-alpha-down"></i></span>
@@ -112,6 +112,24 @@ const WordList = () => {
               <option value="type">按类型</option>
             </select>
           </div>
+        </div>
+        <div className="col-lg-2 col-md-6 mb-3 d-grid">
+          <button className="btn btn-outline-secondary btn-lg" onClick={() => {
+            setSearchTerm('');
+            setSelectedType('');
+            setSortBy('word');
+          }}>
+            <i className="bi bi-x-circle me-2"></i>清除筛选
+          </button>
+        </div>
+      </div>
+
+      {/* Filtered Word Count */}
+      <div className="row mb-4">
+        <div className="col-12">
+          <p className="text-muted">
+            {sortedAndFilteredWords.length} 个词汇匹配当前筛选条件。
+          </p>
         </div>
       </div>
 

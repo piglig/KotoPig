@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <WordProvider>
-        <Navbar bg="light" expand="lg" className="mb-3">
+        <Navbar bg="light" expand="lg">
           <Container fluid>
             <Navbar.Brand as={Link} to="/">日语词汇学习工具</Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />

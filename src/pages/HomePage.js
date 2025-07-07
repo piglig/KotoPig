@@ -12,7 +12,7 @@ const HomePage = () => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100vh' }}> {/* Adjust height based on navbar height */}
+    <div style={{ width: '100%', height: 'calc(100vh - 56px)' }}> {/* Adjust height based on navbar height */}
       <WordCloud words={words} onSelectWord={handleSelectWord} />
     </div>
   );
