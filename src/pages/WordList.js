@@ -4,7 +4,7 @@ import WordCard from '../components/WordCard';
 import { useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { TextField, InputAdornment, IconButton, Select, MenuItem, FormControl, InputLabel, Button, Paper, ToggleButton, ToggleButtonGroup, Box, Grid, Typography, CircularProgress } from '@mui/material';
-import { Search, ViewList, ViewModule, CheckCircleOutline, InfoOutlined } from '@mui/icons-material';
+import { Search, ViewList, ViewModule, CheckCircleOutline, InfoOutlined, Clear } from '@mui/icons-material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FixedSizeList as List } from 'react-window';
 import WordListItem from '../components/WordListItem';
@@ -34,10 +34,17 @@ const WordList = () => {
 
   const sortedAndFilteredWords = useMemo(() => {
     let filtered = words.filter(word => {
-      return (
-        (word.word.includes(searchTerm) || word.reading.includes(searchTerm) || word.meaning.includes(searchTerm)) &&
-        (selectedType === '' || word.type === selectedType)
-      );
+      const lowerCaseSearchTerm = searchTerm.toLowerCase();
+      const isSingleLetterSearch = lowerCaseSearchTerm.length === 1 && lowerCaseSearchTerm.match(/[a-z]/i);
+
+      if (isSingleLetterSearch) {
+        return word.reading.toLowerCase().startsWith(lowerCaseSearchTerm);
+      } else {
+        return (
+          (word.word.includes(searchTerm) || word.reading.includes(searchTerm) || word.meaning.includes(searchTerm)) &&
+          (selectedType === '' || word.type === selectedType)
+        );
+      }
     });
 
     // Sorting logic
@@ -108,51 +115,61 @@ const WordList = () => {
 
   return (
     <Container className="py-4">
-      <Paper elevation={3} className="p-3 mb-4">
+      <Paper elevation={2} sx={{ p: 3, borderRadius: 3, mb: 4 }}>
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={6} md={3}>
-            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <TextField
-                id="searchTerm"
-                variant="outlined"
-                fullWidth
-                placeholder={`在 ${words.length} 个词汇中搜索...`}
-                value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <Search />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </motion.div>
+          {/* 搜索框区域 */}
+          <Grid item xs={12} md={5}>
+            <TextField
+              variant="outlined"
+              fullWidth
+              placeholder={`🔍 搜索 ${words.length} 个词汇...`}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Search />
+                  </InputAdornment>
+                ),
+                endAdornment: (
+                  <InputAdornment position="end">
+                    {searchTerm && (
+                      <IconButton onClick={() => setSearchTerm('')}>
+                        <Clear />
+                      </IconButton>
+                    )}
+                  </InputAdornment>
+                ),
+              }}
+              sx={{ bgcolor: '#fafafa', borderRadius: 1 }}
+            />
           </Grid>
-          <Grid item xs={12} sm={6} md={2}>
+
+          {/* 筛选类型 */}
+          <Grid item xs={6} md={2.5}>
             <FormControl fullWidth>
-              <InputLabel id="select-type-label">筛选类型</InputLabel>
+              <InputLabel>筛选类型</InputLabel>
               <Select
-                labelId="select-type-label"
-                id="selectType"
                 value={selectedType}
                 label="筛选类型"
-                onChange={e => setSelectedType(e.target.value)}
+                onChange={(e) => setSelectedType(e.target.value)}
               >
                 <MenuItem value=""><em>所有类型</em></MenuItem>
-                {types.map(type => <MenuItem key={type} value={type}>{type}</MenuItem>)}
+                {types.map((type) => (
+                  <MenuItem key={type} value={type}>{type}</MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={6} md={2}>
+
+          {/* 排序方式 */}
+          <Grid item xs={6} md={2.5}>
             <FormControl fullWidth>
-              <InputLabel id="sort-by-label">排序方式</InputLabel>
+              <InputLabel>排序方式</InputLabel>
               <Select
-                labelId="sort-by-label"
-                id="sortBy"
                 value={sortBy}
                 label="排序方式"
-                onChange={e => setSortBy(e.target.value)}
+                onChange={(e) => setSortBy(e.target.value)}
               >
                 <MenuItem value="word">按词汇</MenuItem>
                 <MenuItem value="reading">按读音</MenuItem>
@@ -160,49 +177,77 @@ const WordList = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} sm={6} md={2}>
-            <Button variant="outlined" fullWidth onClick={() => {
-              setSearchTerm('');
-              setSelectedType('');
-              setSortBy('word');
-            }}>
-              清除筛选
-            </Button>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <ToggleButtonGroup value={view} exclusive onChange={handleViewChange}>
-              <ToggleButton value="grid" aria-label="grid view">
-                <ViewModule />
-              </ToggleButton>
-              <ToggleButton value="list" aria-label="list view">
-                <ViewList />
-              </ToggleButton>
-            </ToggleButtonGroup>
+
+          {/* 右侧控制区 */}
+          <Grid item xs={12} md={2} container spacing={1} justifyContent="flex-end">
+            <Grid item xs={6}>
+              <Button
+                fullWidth
+                variant="outlined"
+                color="secondary"
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedType('');
+                  setSortBy('word');
+                }}
+              >
+                清除
+              </Button>
+            </Grid>
+            <Grid item xs={6}>
+              <ToggleButtonGroup
+                value={view}
+                exclusive
+                size="small"
+                onChange={handleViewChange}
+                fullWidth
+              >
+                <ToggleButton value="grid">
+                  <ViewModule fontSize="small" />
+                </ToggleButton>
+                <ToggleButton value="list">
+                  <ViewList fontSize="small" />
+                </ToggleButton>
+              </ToggleButtonGroup>
+            </Grid>
           </Grid>
         </Grid>
-        <div className="row mt-3">
-          <div className="col-12 text-center">
-            <p className="text-muted mb-0 fs-6">
-              <span className="badge bg-primary-subtle text-primary me-2">{sortedAndFilteredWords.length}</span> 个词汇匹配当前筛选条件。
-            </p>
-          </div>
-        </div>
+
+        {/* 匹配提示 */}
+        <Box mt={2} textAlign="center">
+          <Typography variant="body2" color="text.secondary">
+            <span className="badge bg-primary-subtle text-primary me-2">
+              {sortedAndFilteredWords.length}
+            </span>
+            个词汇匹配当前筛选条件。
+          </Typography>
+        </Box>
       </Paper>
+
 
       {/* Word List */}
       <AnimatePresence mode="wait">
         {view === 'grid' ? (
           <motion.div
             key="grid-view"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={{
+              visible: { transition: { staggerChildren: 0.05 } },
+              hidden: {},
+            }}
             transition={{ duration: 0.3 }}
           >
             <Grid container spacing={3}>
               {sortedAndFilteredWords.slice(0, displayCount).map(word => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={word.word}>
-                  <WordCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
+                  <motion.div variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}>
+                    <WordCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
+                  </motion.div>
                 </Grid>
               ))}
             </Grid>
