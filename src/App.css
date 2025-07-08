@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .filter-input-group .input-group-text {
-  background-color: var(--light-color); /* Light background for the icon */
+  background-color: var(--card-bg); /* Set background to card background */
   border: none; /* Remove individual border */
   padding: 0.8rem 0.75rem 0.8rem 1.2rem; /* Adjust padding for icon */
 }
@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 .filter-input-group .form-control,
 .filter-input-group .form-select {
   border: none; /* Remove individual border */
-  background-color: #ffffff; /* White background for input */
+  background-color: var(--card-bg); /* Set background to card background */
   padding: 0.8rem 1.2rem 0.8rem 0.75rem; /* Adjust padding for input */
 }
 

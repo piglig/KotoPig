@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
+import wordsData from '../data/words.json';
 
 const WordContext = createContext();
 
@@ -11,12 +12,7 @@ export const WordProvider = ({ children }) => {
 
   // Load initial data
   useEffect(() => {
-    fetch('/words.json')
-      .then(response => response.json())
-      .then(data => {
-        console.log('Loaded words:', data);
-        setWords(data);
-      });
+    setWords(wordsData);
 
     const savedProgress = localStorage.getItem('wordProgress');
     if (savedProgress) {

@@ -1,12 +1,9 @@
 import React from 'react';
+import { Card, CardContent, Typography, IconButton, Chip, Box } from '@mui/material';
+import { VolumeUp } from '@mui/icons-material';
+import { motion } from 'framer-motion';
 
 const WordCard = ({ word, onSelect, isLearned }) => {
-  const typeColorClass = {
-    verb: 'bg-primary',
-    noun: 'bg-success',
-    adjective: 'bg-warning'
-  };
-
   const handlePlayAudio = (e) => {
     e.stopPropagation(); // Prevent card click from navigating
     if ('speechSynthesis' in window) {
@@ -18,35 +15,68 @@ const WordCard = ({ word, onSelect, isLearned }) => {
     }
   };
 
+  const typeColor = (type) => {
+    switch (type) {
+      case 'verb': return 'primary';
+      case 'noun': return 'success';
+      case 'adjective': return 'warning';
+      default: return 'default';
+    }
+  };
+
   return (
-    <div
-      className={`card h-100 shadow-sm border-0 rounded-3 ${isLearned ? 'card-learned' : ''}`}
-      style={{ cursor: 'pointer', transition: 'all 0.3s ease-in-out' }}
-      onClick={() => onSelect(word)}
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
     >
-      <div className="card-body d-flex flex-column p-4">
-        <div className="d-flex justify-content-between align-items-start mb-2">
-          <h5 className="card-title mb-0 text-dark fw-bold fs-4">
-            {word.word} <span className="text-muted fw-normal fs-6">({word.reading})</span>
-            <button className="btn btn-sm btn-outline-primary ms-2" onClick={handlePlayAudio}>
-              <i className="bi bi-volume-up-fill"></i>
-            </button>
-          </h5>
-          {isLearned && (
-            <span className="badge bg-success-subtle text-success rounded-pill px-3 py-2 d-flex align-items-center">
-              <i className="bi bi-check-circle-fill me-1"></i> 已学习
-            </span>
-          )}
-        </div>
-        <p className="card-text text-muted flex-grow-1 mb-3 fs-6">{word.meaning}</p>
-        <div className="mt-auto d-flex flex-wrap gap-2">
-          <span className={`badge ${typeColorClass[word.type] || 'bg-secondary'} fs-6 px-3 py-2 rounded-pill`}>{word.type}</span>
-          {word.group && word.type !== 'noun' && (
-            <span className="badge bg-info-subtle text-info fs-6 px-3 py-2 rounded-pill">{word.group}</span>
-          )}
-        </div>
-      </div>
-    </div>
+      <Card
+        variant="outlined"
+        sx={{
+          height: '100%',
+          cursor: 'pointer',
+          display: 'flex',
+          flexDirection: 'column',
+          borderColor: isLearned ? 'success.main' : 'grey.300',
+          borderWidth: isLearned ? 2 : 1,
+          boxShadow: isLearned ? '0px 0px 12px rgba(76, 175, 80, 0.6)' : '0px 2px 4px rgba(0,0,0,0.1)',
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            boxShadow: isLearned ? '0px 0px 16px rgba(76, 175, 80, 0.8)' : '0px 4px 8px rgba(0,0,0,0.2)',
+            transform: 'translateY(-2px)',
+          },
+        }}
+        onClick={() => onSelect(word)}
+      >
+        <CardContent sx={{ flexGrow: 1 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
+            <Typography variant={{ xs: 'h6', sm: 'h5' }} component="div" sx={{ fontWeight: 'bold' }}>
+              {word.word}
+              <Typography variant={{ xs: 'body2', sm: 'subtitle1' }} component="span" color="text.secondary" sx={{ ml: 1 }}>
+                ({word.reading})
+              </Typography>
+              <IconButton size="small" onClick={handlePlayAudio} sx={{ ml: 1 }}>
+                <VolumeUp fontSize="small" />
+              </IconButton>
+            </Typography>
+            {isLearned && (
+              <Chip label="已学习" color="success" size="small" sx={{ fontWeight: 'bold' }} />
+            )}
+          </Box>
+          <Typography variant={{ xs: 'body2', sm: 'body1' }} color="text.primary" sx={{ mb: 2 }}>
+            {word.meaning}
+          </Typography>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 'auto' }}>
+            <Chip label={word.type} color={typeColor(word.type)} size="small" />
+            {word.group && word.type !== 'noun' && (
+              <Chip label={word.group} color="info" size="small" />
+            )}
+          </Box>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 

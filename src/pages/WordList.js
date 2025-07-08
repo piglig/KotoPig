@@ -3,6 +3,11 @@ import { useWordContext } from '../contexts/WordContext';
 import WordCard from '../components/WordCard';
 import { useNavigate } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { TextField, InputAdornment, IconButton, Select, MenuItem, FormControl, InputLabel, Button, Paper, ToggleButton, ToggleButtonGroup, Box, Grid, Typography, CircularProgress } from '@mui/material';
+import { Search, ViewList, ViewModule, CheckCircleOutline, InfoOutlined } from '@mui/icons-material';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FixedSizeList as List } from 'react-window';
+import WordListItem from '../components/WordListItem';
 
 const WORDS_PER_LOAD = 30; // Number of words to load at a time
 
@@ -19,8 +24,12 @@ const WordList = () => {
   const [displayCount, setDisplayCount] = useState(WORDS_PER_LOAD);
   const loadingRef = useRef(null);
 
-  const handleSelectWord = (word) => {
-    navigate(`/detail/${word.word}`);
+  const [view, setView] = useState('grid'); // 'grid' or 'list'
+
+  const handleViewChange = (event, nextView) => {
+    if (nextView !== null) {
+      setView(nextView);
+    }
   };
 
   const sortedAndFilteredWords = useMemo(() => {
@@ -47,6 +56,28 @@ const WordList = () => {
   }, [words, searchTerm, selectedType, sortBy]);
 
   const types = useMemo(() => [...new Set(words.map(w => w.type))], [words]);
+
+  const listRef = useRef();
+  const alphabetIndex = useMemo(() => {
+    const index = {};
+    sortedAndFilteredWords.forEach((word, i) => {
+      const letter = word.reading.charAt(0).toUpperCase();
+      if (!index[letter]) {
+        index[letter] = i;
+      }
+    });
+    return index;
+  }, [sortedAndFilteredWords]);
+
+  const handleLetterJump = (letter) => {
+    if (listRef.current && alphabetIndex[letter]) {
+      listRef.current.scrollToItem(alphabetIndex[letter], 'start');
+    }
+  };
+
+  const handleSelectWord = (word) => {
+    navigate(`/detail/${word.word}`);
+  };
 
   // Intersection Observer for infinite scroll
   useEffect(() => {
@@ -77,91 +108,173 @@ const WordList = () => {
 
   return (
     <Container className="py-4">
-      <div className="filter-card">
-        <div className="row g-4 align-items-end">
-          <div className="col-lg-4 col-md-6">
-            <label htmlFor="searchTerm" className="filter-label">搜索</label>
-            <div className="input-group filter-input-group">
-              <span className="input-group-text"><i className="bi bi-search text-primary"></i></span>
-              <input
-                type="text"
-                className="form-control"
+      <Paper elevation={3} className="p-3 mb-4">
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs={12} sm={6} md={3}>
+            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+              <TextField
                 id="searchTerm"
+                variant="outlined"
+                fullWidth
                 placeholder={`在 ${words.length} 个词汇中搜索...`}
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <Search />
+                    </InputAdornment>
+                  ),
+                }}
               />
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <label htmlFor="selectType" className="filter-label">筛选类型</label>
-            <div className="input-group filter-input-group">
-              <span className="input-group-text"><i className="bi bi-tag-fill text-primary"></i></span>
-              <select className="form-select" id="selectType" value={selectedType} onChange={e => setSelectedType(e.target.value)}>
-                <option value="">所有类型</option>
-                {types.map(type => <option key={type} value={type}>{type}</option>)}
-              </select>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6">
-            <label htmlFor="sortBy" className="filter-label">排序方式</label>
-            <div className="input-group filter-input-group">
-              <span className="input-group-text"><i className="bi bi-sort-alpha-down text-primary"></i></span>
-              <select className="form-select" id="sortBy" value={sortBy} onChange={e => setSortBy(e.target.value)}>
-                <option value="word">按词汇</option>
-                <option value="reading">按读音</option>
-                <option value="type">按类型</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-6 d-grid">
-            <button className="btn w-100 filter-clear-btn" onClick={() => {
+            </motion.div>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <FormControl fullWidth>
+              <InputLabel id="select-type-label">筛选类型</InputLabel>
+              <Select
+                labelId="select-type-label"
+                id="selectType"
+                value={selectedType}
+                label="筛选类型"
+                onChange={e => setSelectedType(e.target.value)}
+              >
+                <MenuItem value=""><em>所有类型</em></MenuItem>
+                {types.map(type => <MenuItem key={type} value={type}>{type}</MenuItem>)}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <FormControl fullWidth>
+              <InputLabel id="sort-by-label">排序方式</InputLabel>
+              <Select
+                labelId="sort-by-label"
+                id="sortBy"
+                value={sortBy}
+                label="排序方式"
+                onChange={e => setSortBy(e.target.value)}
+              >
+                <MenuItem value="word">按词汇</MenuItem>
+                <MenuItem value="reading">按读音</MenuItem>
+                <MenuItem value="type">按类型</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={6} md={2}>
+            <Button variant="outlined" fullWidth onClick={() => {
               setSearchTerm('');
               setSelectedType('');
               setSortBy('word');
             }}>
-              <i className="bi bi-x-circle me-2"></i>清除筛选
-            </button>
-          </div>
-        </div>
-        <div className="row mt-4">
+              清除筛选
+            </Button>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <ToggleButtonGroup value={view} exclusive onChange={handleViewChange}>
+              <ToggleButton value="grid" aria-label="grid view">
+                <ViewModule />
+              </ToggleButton>
+              <ToggleButton value="list" aria-label="list view">
+                <ViewList />
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </Grid>
+        </Grid>
+        <div className="row mt-3">
           <div className="col-12 text-center">
-            <p className="text-muted mb-0 fs-5">
+            <p className="text-muted mb-0 fs-6">
               <span className="badge bg-primary-subtle text-primary me-2">{sortedAndFilteredWords.length}</span> 个词汇匹配当前筛选条件。
             </p>
           </div>
         </div>
-      </div>
+      </Paper>
 
       {/* Word List */}
-      <div className="row">
-        {sortedAndFilteredWords.slice(0, displayCount).map(word => (
-          <div className="col-xl-3 col-lg-4 col-md-6 mb-4" key={word.word}>
-            <WordCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
-          </div>
-        ))}
-      </div>
+      <AnimatePresence mode="wait">
+        {view === 'grid' ? (
+          <motion.div
+            key="grid-view"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Grid container spacing={3}>
+              {sortedAndFilteredWords.slice(0, displayCount).map(word => (
+                <Grid item xs={12} sm={6} md={4} lg={3} key={word.word}>
+                  <WordCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
+                </Grid>
+              ))}
+            </Grid>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="list-view"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <>
+              <List
+                ref={listRef}
+                height={600} // Adjust height as needed
+                itemCount={sortedAndFilteredWords.length}
+                itemSize={72} // Adjusted item size for WordListItem
+                width={'100%'}
+              >
+                {({ index, style }) => {
+                  const word = sortedAndFilteredWords[index];
+                  return (
+                    <div style={style} key={word.word}>
+                      <WordListItem word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
+                    </div>
+                  );
+                }}
+              </List>
+              <Box sx={{
+                position: 'fixed',
+                top: '50%',
+                right: { xs: '10px', md: '20px' }, // Adjust right position for different screen sizes
+                transform: 'translateY(-50%)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '5px',
+                zIndex: 1000, // Ensure it's above other content
+                backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent background
+                borderRadius: '8px',
+                p: 1,
+                boxShadow: 3,
+              }}>
+                {Object.keys(alphabetIndex).sort().map(letter => (
+                  <Button key={letter} size="small" onClick={() => handleLetterJump(letter)}>
+                    {letter}
+                  </Button>
+                ))}
+              </Box>
+            </>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Loading Indicator */}
       {displayCount < sortedAndFilteredWords.length && (
-        <div ref={loadingRef} className="text-center my-5 p-4 bg-light rounded-4 shadow-sm">
-          <div className="spinner-border text-primary mb-3" role="status" style={{ width: '3rem', height: '3rem' }}>
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <p className="text-muted mb-0 fs-5">加载更多词汇...</p>
-        </div>
+        <Box ref={loadingRef} sx={{ textAlign: 'center', my: 5, p: 4, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 1 }}>
+          <CircularProgress color="primary" size={60} sx={{ mb: 2 }} />
+          <Typography variant="h6" color="text.secondary">加载更多词汇...</Typography>
+        </Box>
       )}
 
       {displayCount >= sortedAndFilteredWords.length && sortedAndFilteredWords.length > 0 && (
-        <div className="text-center my-5 p-4 bg-light rounded-4 shadow-sm">
-          <p className="text-muted mb-0 fs-5"><i className="bi bi-check-circle-fill text-success me-2 fs-4 align-middle"></i>所有词汇已加载。</p>
-        </div>
+        <Box sx={{ textAlign: 'center', my: 5, p: 4, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 1 }}>
+          <Typography variant="h6" color="success.main"><CheckCircleOutline sx={{ verticalAlign: 'middle', mr: 1 }} />所有词汇已加载。</Typography>
+        </Box>
       )}
 
       {sortedAndFilteredWords.length === 0 && (
-        <div className="text-center my-5 p-4 bg-light rounded-4 shadow-sm">
-          <p className="text-muted mb-0 fs-5"><i className="bi bi-info-circle-fill text-info me-2 fs-4 align-middle"></i>没有找到匹配的词汇。</p>
-        </div>
+        <Box sx={{ textAlign: 'center', my: 5, p: 4, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 1 }}>
+          <Typography variant="h6" color="info.main"><InfoOutlined sx={{ verticalAlign: 'middle', mr: 1 }} />没有找到匹配的词汇。</Typography>
+        </Box>
       )}
     </Container>
   );
