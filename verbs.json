@@ -1,0 +1,902 @@
+[
+  {
+    "verb": "悪どい",
+    "reading": "あくどい",
+    "meaning": "gaudy; showy; garish; loud",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "論う",
+    "reading": "あげつらう",
+    "meaning": "to discuss",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "遇う",
+    "reading": "あしらう",
+    "meaning": "to treat; to handle; to deal with",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "あっさり",
+    "reading": "あっさり",
+    "meaning": "easily; readily; quickly; flatly (refuse)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "あっぷあっぷ",
+    "reading": "あっぷあっぷ",
+    "meaning": "floundering while nearly drowning",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "あどけない",
+    "reading": "あどけない",
+    "meaning": "innocent; cherubic; childlike",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "溢れる",
+    "reading": "あぶれる",
+    "meaning": "to fail (in getting a job); to miss out (at fishing, hunting, etc.)",
+    "jlpt_level": "Unknown",
+    "group": "ichidan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "あやす",
+    "reading": "あやす",
+    "meaning": "to cuddle; to comfort; to rock; to soothe; to dandle; to humor; to humour; to lull",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "如何わしい",
+    "reading": "いかがわしい",
+    "meaning": "suspicious; dubious; unreliable",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いかす",
+    "reading": "いかす",
+    "meaning": "to be smart; to be cool; to be sharp; to be stylish",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "行けない",
+    "reading": "いけない",
+    "meaning": "bad; wrong; naughty",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "イジイジ",
+    "reading": "イジイジ",
+    "meaning": "hesitantly; timidly; diffidently",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いじける",
+    "reading": "いじける",
+    "meaning": "to grow timid; to cower; to shrink; to lose one's nerve",
+    "jlpt_level": "Unknown",
+    "group": "ichidan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いじましい",
+    "reading": "いじましい",
+    "meaning": "stingy; petty; pathetic",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いじらしい",
+    "reading": "いじらしい",
+    "meaning": "lovable; sweet; charming",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いじり回す",
+    "reading": "いじりまわす",
+    "meaning": "to tinker with; to fumble with; to fiddle with; to twiddle",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いそいそ",
+    "reading": "いそいそ",
+    "meaning": "cheerfully; joyously; joyfully; happily; lightheartedly; excitedly; eagerly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "イチャイチャ",
+    "reading": "イチャイチャ",
+    "meaning": "making out; necking; getting handsy; canoodling; being lovey-dovey; getting affectionate (with each other); romantic play; fondling",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いちゃつく",
+    "reading": "いちゃつく",
+    "meaning": "to make out; to neck; to canoodle; to fondle each other; to flirt (with)",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "嘶く",
+    "reading": "いななく",
+    "meaning": "to neigh",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "いびる",
+    "reading": "いびる",
+    "meaning": "to pick on; to tease",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "居らっしゃる",
+    "reading": "いらっしゃる",
+    "meaning": "to come; to go; to be (somewhere)",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うじうじ",
+    "reading": "うじうじ",
+    "meaning": "indecisively; hesitantly; irresolutely; wishy-washily",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うじゃうじゃ",
+    "reading": "うじゃうじゃ",
+    "meaning": "in swarms; in clusters",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うずうず",
+    "reading": "うずうず",
+    "meaning": "itching to do something; impatient; sorely tempted; eager",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うだうだ",
+    "reading": "うだうだ",
+    "meaning": "going on and on (about inconsequential things); talking nonsense",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うっかり",
+    "reading": "うっかり",
+    "meaning": "carelessly; thoughtlessly; inadvertently",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うとうと",
+    "reading": "うとうと",
+    "meaning": "falling into a doze; dozing off; nodding off",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うねうね",
+    "reading": "うねうね",
+    "meaning": "winding; meandering; zigzagging; zig-zag; in twists and turns; sinuously; tortuously",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うろうろ",
+    "reading": "うろうろ",
+    "meaning": "restlessly; aimlessly; without purpose",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "狼狽える",
+    "reading": "うろたえる",
+    "meaning": "to be flustered; to lose one's presence of mind",
+    "jlpt_level": "Unknown",
+    "group": "ichidan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うんこ",
+    "reading": "うんこ",
+    "meaning": "poop; poo; faeces; feces",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "うんざり",
+    "reading": "うんざり",
+    "meaning": "tedious; boring; being fed up with",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ウンチ",
+    "reading": "ウンチ",
+    "meaning": "poo; poop; doo-doo; caca; whoopsie",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "えげつない",
+    "reading": "えげつない",
+    "meaning": "dirty; vulgar; nasty; offensive; disgusting",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お出でになる",
+    "reading": "おいでになる",
+    "meaning": "to be",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お座なりになる",
+    "reading": "おざなりになる",
+    "meaning": "to not be taken seriously",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "おしっこ",
+    "reading": "おしっこ",
+    "meaning": "wee-wee; pee-pee; number one",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "悍ましい",
+    "reading": "おぞましい",
+    "meaning": "disgusting; repulsive",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "オタオタ",
+    "reading": "オタオタ",
+    "meaning": "flustered; flurried; (shocked) speechless",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "おっかない",
+    "reading": "おっかない",
+    "meaning": "frightening; scary",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "落っこちる",
+    "reading": "おっこちる",
+    "meaning": "to fall; to drop",
+    "jlpt_level": "Unknown",
+    "group": "ichidan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "オドオド",
+    "reading": "オドオド",
+    "meaning": "timidly; nervously; hesitantly; trembling (with fear); fearfully; anxiously",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お粧し",
+    "reading": "おめかし",
+    "meaning": "dressing up; putting on makeup; dolling (oneself) up",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "おろおろ",
+    "reading": "おろおろ",
+    "meaning": "in confusion; in a fluster; in bewilderment; in a dither; in a panic; all shook up; helplessly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お宮参り",
+    "reading": "おみやまいり",
+    "meaning": "miyamairi; newborn child's first visit to a shrine (within about 30 days of being born)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お供",
+    "reading": "おとも",
+    "meaning": "attendant; companion",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お見えになる",
+    "reading": "おみえになる",
+    "meaning": "to arrive",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お参り",
+    "reading": "おまいり",
+    "meaning": "visit (to a shrine, grave, etc.); worship",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お辞儀",
+    "reading": "おじぎ",
+    "meaning": "bow; bowing",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お勧め",
+    "reading": "おすすめ",
+    "meaning": "recommendation; advice; suggestion; encouragement",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お寝小",
+    "reading": "おねしょ",
+    "meaning": "bed-wetting",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お世話になる",
+    "reading": "おせわになる",
+    "meaning": "to receive favor; to receive assistance; to receive help; to be looked after; to be taken care of; to become dependent (on); to become much obliged (to someone); to become indebted",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お喋り",
+    "reading": "おしゃべり",
+    "meaning": "chattering; talk; idle talk; chat; chitchat; gossip",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お風呂に入る",
+    "reading": "おふろにはいる",
+    "meaning": "to take a bath; to have a bath",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お返し",
+    "reading": "おかえし",
+    "meaning": "return gift; return favour",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お漏らし",
+    "reading": "おもらし",
+    "meaning": "wetting oneself; peeing in one's pants",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "お洒落",
+    "reading": "おしゃれ",
+    "meaning": "stylish; fashionable; trendy; chic; smartly dressed; careful about one's appearance",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "悴む",
+    "reading": "かじかむ",
+    "meaning": "to grow numb with cold",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "カチッと",
+    "reading": "カチッと",
+    "meaning": "with a click; with a clink; with a snap",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "かっか",
+    "reading": "かっか",
+    "meaning": "to burn hotly; to burn redly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "格好つける",
+    "reading": "かっこうつける",
+    "meaning": "to affect a stylish air; to try to look good; to show off",
+    "jlpt_level": "Unknown",
+    "group": "ichidan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "掻っ攫う",
+    "reading": "かっさらう",
+    "meaning": "to snatch (and run); to carry off; to swipe; to nab",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "かっちり",
+    "reading": "かっちり",
+    "meaning": "tightly; exactly; precisely",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "カッと",
+    "reading": "カッと",
+    "meaning": "flaring up; burning hotly; suddenly becoming bright",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "敵わない",
+    "reading": "かなわない",
+    "meaning": "no match for; cannot compete with; not in the same league as; powerless against",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "からっと",
+    "reading": "からっと",
+    "meaning": "bright and clear (weather, sky, etc.); perfectly (fine weather)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "か弱い",
+    "reading": "かよわい",
+    "meaning": "weak; feeble; delicate; frail; helpless",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ガクガク",
+    "reading": "ガクガク",
+    "meaning": "trembling (with fear, cold, etc.); shaking; chattering (of teeth)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がさがさ",
+    "reading": "がさがさ",
+    "meaning": "rustling",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ガタガタ",
+    "reading": "ガタガタ",
+    "meaning": "rattling; clattering",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がっかり",
+    "reading": "がっかり",
+    "meaning": "to be disappointed; to be dejected; to be downhearted; to be discouraged; to be disheartened; to lose heart; to feel let down",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がっくり",
+    "reading": "がっくり",
+    "meaning": "heartbroken; crestfallen; dejected; disappointed",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がっしり",
+    "reading": "がっしり",
+    "meaning": "firmly; solidly; sturdily; strongly; toughly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がっちり",
+    "reading": "がっちり",
+    "meaning": "solid; robust; well-built",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ガツガツ",
+    "reading": "ガツガツ",
+    "meaning": "hungrily; voraciously; ravenously",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "がやがや",
+    "reading": "がやがや",
+    "meaning": "noisily (crowd of people talking); clamorously; in a hubbub; jabberingly; chatteringly; buzzingly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ガラガラ",
+    "reading": "ガラガラ",
+    "meaning": "with a clatter; with a rattle",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ガリ勉",
+    "reading": "がりべん",
+    "meaning": "person who studies very hard (at school); grind; swot; drudge",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きちっと",
+    "reading": "きちっと",
+    "meaning": "exactly; perfectly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きちんと",
+    "reading": "きちんと",
+    "meaning": "properly; accurately; exactly; precisely; regularly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きっちり",
+    "reading": "きっちり",
+    "meaning": "exactly; precisely; punctually; on the dot",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きっぱり",
+    "reading": "きっぱり",
+    "meaning": "clearly; plainly; distinctly; decisively; flatly; definitely; resolutely",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きつい",
+    "reading": "きつい",
+    "meaning": "tough; hard; severe; demanding; harsh",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きびきび",
+    "reading": "きびきび",
+    "meaning": "brisk; lively; energetic",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "キョロキョロ",
+    "reading": "キョロキョロ",
+    "meaning": "(looking around) restlessly; (looking) all around; goggling",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "キラキラ",
+    "reading": "キラキラ",
+    "meaning": "glittering; sparkling; glistening; twinkling",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "きんきん",
+    "reading": "きんきん",
+    "meaning": "shrill; strident; piercing; tinkling; metallic-sounding",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ギクシャク",
+    "reading": "ギクシャク",
+    "meaning": "awkward (movements, speech, etc.); jerky; stiff; stilted",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ぎこちない",
+    "reading": "ぎこちない",
+    "meaning": "awkward; clumsy; stiff; crude; unrefined; constrained",
+    "jlpt_level": "Unknown",
+    "group": "Unknown",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "刻々",
+    "reading": "ギザギザ",
+    "meaning": "notches; serration; indentation; jaggies (stair-step artifacts in computer images)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ギスギス",
+    "reading": "ギスギス",
+    "meaning": "stiff (atmosphere, manner, etc.); cold; unfriendly; unsociable; edgy",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ぎゅっと",
+    "reading": "ぎゅっと",
+    "meaning": "tightly (hold, squeeze, etc.); firmly; forcefully (e.g. push); hard",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ぎょっと",
+    "reading": "ぎょっと",
+    "meaning": "being startled",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ぎょろぎょろ",
+    "reading": "ぎょろぎょろ",
+    "meaning": "goggling; rolling (one's eyes)",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "ギラギラ",
+    "reading": "ギラギラ",
+    "meaning": "glaringly; dazzlingly; blazingly",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "くさくさ",
+    "reading": "くさくさ",
+    "meaning": "feeling depressed; feeling gloomy; feeling downhearted",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "くしゃくしゃ",
+    "reading": "くしゃくしゃ",
+    "meaning": "crumpled; rumpled; wrinkled; creased; tousled; disheveled; dishevelled",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "嚏",
+    "reading": "くしゃみ",
+    "meaning": "sneeze; sneezing",
+    "jlpt_level": "Unknown",
+    "group": "suru",
+    "forms": {},
+    "examples": []
+  },
+  {
+    "verb": "くすくす笑う",
+    "reading": "くすくすわらう",
+    "meaning": "to giggle",
+    "jlpt_level": "Unknown",
+    "group": "godan",
+    "forms": {},
+    "examples": []
+  }
+]

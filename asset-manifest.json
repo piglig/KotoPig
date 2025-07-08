@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KotoPig/static/css/main.073a8c47.css",
+    "main.js": "/KotoPig/static/js/main.b6153b1d.js",
+    "static/js/453.f890b6a8.chunk.js": "/KotoPig/static/js/453.f890b6a8.chunk.js",
+    "index.html": "/KotoPig/index.html",
+    "main.073a8c47.css.map": "/KotoPig/static/css/main.073a8c47.css.map",
+    "main.b6153b1d.js.map": "/KotoPig/static/js/main.b6153b1d.js.map",
+    "453.f890b6a8.chunk.js.map": "/KotoPig/static/js/453.f890b6a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073a8c47.css",
+    "static/js/main.b6153b1d.js"
+  ]
+}
