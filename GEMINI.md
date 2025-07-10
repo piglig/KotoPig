@@ -6,12 +6,12 @@
 
 KotoPig 是一个为日语学习者设计的，用于学习和练习动词变化的 Web 应用。
 
-- **前端:** 使用 **React** 构建的富交互用户界面，UI 采用 **Tailwind CSS**。
+- **前端:** 使用 **React** 构建的富交互用户界面，UI 采用 **Material-UI (MUI)**。
 - **后端/数据处理:** 使用 **Python** 脚本集，用于抓取动词数据、处理词典文件以及利用AI生成内容。
 
 项目的核心目标是提供一个引人入胜且高效的学习体验。
 
-## 2. 前端开发 (React & Tailwind CSS)
+## 2. 前端开发 (React & Material-UI)
 
 前端是一个标准的 [Create React App](https://create-react-app.dev/) 项目。
 
@@ -19,11 +19,12 @@ KotoPig 是一个为日语学习者设计的，用于学习和练习动词变化
 - **核心库与框架:**
     - **React:** 核心视图库。
     - **React Router (`react-router-dom`):** 用于页面导航和路由。
-    - **Tailwind CSS:** 用于UI样式的原子化CSS框架。
+    - **Material-UI (MUI):** 用于 UI 样式。
     - **Framer Motion:** 用于实现动画效果。
+    - **Lottie:** 用于实现后置动画效果。
 - **代码风格:**
     - **React:** 请遵循项目现有的代码风格，该风格基于标准的 React 约定和项目的 ESLint 配置 (`react-app`, `react-app/jest`)。
-    - **Tailwind CSS:** 直接在 `className` 属性中编写工具类。对于复杂的、可复用的样式组合，可以考虑使用 `@apply` 指令在CSS文件中创建组件类，但优先使用工具类。
+    - **Material-UI (MUI):** 遵循 MUI 的组件使用和样式约定。
 - **目录结构:**
     - `src/components`: 可复用的 UI 组件。
     - `src/pages`: 与路由对应的顶层页面组件。
@@ -91,7 +92,7 @@ KotoPig 是一个为日语学习者设计的，用于学习和练习动词变化
 
 1.  **官方文档优先:**
     - **React:** [react.dev](https://react.dev/)
-    - **Tailwind CSS:** [tailwindcss.com](https://tailwindcss.com/)
+    - **Material-UI (MUI):** [mui.com](https://mui.com/)
     - **Python:** [docs.python.org](https://docs.python.org/3/)
     - **Google Generative AI:** [ai.google.dev/docs](https://ai.google.dev/docs)
 
@@ -99,7 +100,7 @@ KotoPig 是一个为日语学习者设计的，用于学习和练习动词变化
     - 使用 `google_web_search` 工具时，构建精确的查询。
     - **示例:**
         - "react useEffect hook dependency array"
-        - "tailwind css grid template columns"
+        - "material-ui grid layout example"
         - "python requests post json example"
 
 3.  **社区资源:**

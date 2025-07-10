@@ -2,8 +2,8 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useWordContext } from '../contexts/WordContext';
 import WordCard from '../components/WordCard';
 import { useNavigate } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
-import { TextField, InputAdornment, IconButton, Select, MenuItem, FormControl, InputLabel, Button, Paper, ToggleButton, ToggleButtonGroup, Box, Grid, Typography, CircularProgress } from '@mui/material';
+
+import { Container, TextField, InputAdornment, IconButton, Select, MenuItem, FormControl, InputLabel, Button, Paper, ToggleButton, ToggleButtonGroup, Box, Grid, Typography, CircularProgress } from '@mui/material';
 import { Search, ViewList, ViewModule, CheckCircleOutline, InfoOutlined, Clear } from '@mui/icons-material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FixedSizeList as List } from 'react-window';

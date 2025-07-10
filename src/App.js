@@ -6,34 +6,30 @@ import WordList from './pages/WordList';
 import WordDetail from './pages/WordDetail';
 import QuizView from './components/QuizView';
 import ProgressView from './components/ProgressView';
-import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 
 function App() {
   return (
     <Router>
       <WordProvider>
-        <Navbar bg="light" expand="lg">
-          <Container fluid>
-            <Navbar.Brand as={Link} to="/">日语词汇学习工具</Navbar.Brand>
-            <Navbar.Toggle aria-controls="offcanvasNavbar" />
-            <Navbar.Offcanvas
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel">导航</Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/list">词汇列表</Nav.Link>
-                  <Nav.Link as={Link} to="/quiz">开始复习</Nav.Link>
-                  <Nav.Link as={Link} to="/progress">我的进度</Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Button color="inherit" component={Link} to="/">
+                日语词汇学习工具
+              </Button>
+            </Typography>
+            <Button color="inherit" component={Link} to="/list">
+              词汇列表
+            </Button>
+            <Button color="inherit" component={Link} to="/quiz">
+              开始复习
+            </Button>
+            <Button color="inherit" component={Link} to="/progress">
+              我的进度
+            </Button>
+          </Toolbar>
+        </AppBar>
 
         <div>
           <Routes>
