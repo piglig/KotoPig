@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useWordContext } from '../contexts/WordContext';
-import WordCard from '../components/WordCard';
+import VerbCard from '../components/VerbCard';
 import { useNavigate } from 'react-router-dom';
 
 import { Container, TextField, InputAdornment, IconButton, Select, MenuItem, FormControl, InputLabel, Button, Paper, ToggleButton, ToggleButtonGroup, Box, Grid, Typography, CircularProgress } from '@mui/material';
@@ -115,20 +115,34 @@ const WordList = () => {
 
   return (
     <Container className="py-4">
-      <Paper elevation={2} sx={{ p: 3, borderRadius: 3, mb: 4 }}>
+      <Box
+        component={motion.div}
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        sx={{
+          p: { xs: 2, md: 3 },
+          mb: 4,
+          borderRadius: 3,
+          background: (theme) => `linear-gradient(145deg, ${theme.palette.mode === 'dark' ? theme.palette.grey[800] : theme.palette.grey[100]}, ${theme.palette.mode === 'dark' ? theme.palette.grey[900] : theme.palette.grey[200]})`,
+          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+          backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(255, 255, 255, 0.18)',
+        }}
+      >
         <Grid container spacing={2} alignItems="center">
           {/* 搜索框区域 */}
           <Grid item xs={12} md={5}>
             <TextField
-              variant="outlined"
+              variant="filled"
               fullWidth
-              placeholder={`🔍 搜索 ${words.length} 个词汇...`}
+              placeholder={`在 ${words.length} 个词汇中搜索...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
-                    <Search />
+                    <Search color="primary" />
                   </InputAdornment>
                 ),
                 endAdornment: (
@@ -140,21 +154,18 @@ const WordList = () => {
                     )}
                   </InputAdornment>
                 ),
+                disableUnderline: true,
+                sx: { borderRadius: 2, bgcolor: 'background.paper' }
               }}
-              sx={{ bgcolor: '#fafafa', borderRadius: 1 }}
             />
           </Grid>
 
-          {/* 筛选类型 */}
+          {/* 筛选与排序 */}
           <Grid item xs={6} md={2.5}>
-            <FormControl fullWidth>
-              <InputLabel>筛选类型</InputLabel>
-              <Select
-                value={selectedType}
-                label="筛选类型"
-                onChange={(e) => setSelectedType(e.target.value)}
-              >
-                <MenuItem value=""><em>所有类型</em></MenuItem>
+            <FormControl fullWidth variant="filled" sx={{ borderRadius: 2, bgcolor: 'background.paper' }}>
+              <InputLabel>类型</InputLabel>
+              <Select value={selectedType} label="类型" onChange={(e) => setSelectedType(e.target.value)} disableUnderline>
+                <MenuItem value=""><em>所有</em></MenuItem>
                 {types.map((type) => (
                   <MenuItem key={type} value={type}>{type}</MenuItem>
                 ))}
@@ -162,15 +173,10 @@ const WordList = () => {
             </FormControl>
           </Grid>
 
-          {/* 排序方式 */}
           <Grid item xs={6} md={2.5}>
-            <FormControl fullWidth>
-              <InputLabel>排序方式</InputLabel>
-              <Select
-                value={sortBy}
-                label="排序方式"
-                onChange={(e) => setSortBy(e.target.value)}
-              >
+            <FormControl fullWidth variant="filled" sx={{ borderRadius: 2, bgcolor: 'background.paper' }}>
+              <InputLabel>排序</InputLabel>
+              <Select value={sortBy} label="排序" onChange={(e) => setSortBy(e.target.value)} disableUnderline>
                 <MenuItem value="word">按词汇</MenuItem>
                 <MenuItem value="reading">按读音</MenuItem>
                 <MenuItem value="type">按类型</MenuItem>
@@ -178,51 +184,33 @@ const WordList = () => {
             </FormControl>
           </Grid>
 
-          {/* 右侧控制区 */}
-          <Grid item xs={12} md={2} container spacing={1} justifyContent="flex-end">
-            <Grid item xs={6}>
-              <Button
-                fullWidth
-                variant="outlined"
-                color="secondary"
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedType('');
-                  setSortBy('word');
-                }}
-              >
-                清除
-              </Button>
-            </Grid>
-            <Grid item xs={6}>
-              <ToggleButtonGroup
-                value={view}
-                exclusive
-                size="small"
-                onChange={handleViewChange}
-                fullWidth
-              >
-                <ToggleButton value="grid">
-                  <ViewModule fontSize="small" />
-                </ToggleButton>
-                <ToggleButton value="list">
-                  <ViewList fontSize="small" />
-                </ToggleButton>
-              </ToggleButtonGroup>
-            </Grid>
+          {/* 视图切换 */}
+          <Grid item xs={12} md={2} container justifyContent="flex-end">
+            <ToggleButtonGroup
+              value={view}
+              exclusive
+              onChange={handleViewChange}
+              aria-label="view mode"
+            >
+              <ToggleButton value="grid" aria-label="grid view">
+                <ViewModule />
+              </ToggleButton>
+              <ToggleButton value="list" aria-label="list view">
+                <ViewList />
+              </ToggleButton>
+            </ToggleButtonGroup>
           </Grid>
         </Grid>
-
+        
         {/* 匹配提示 */}
         <Box mt={2} textAlign="center">
-          <Typography variant="body2" color="text.secondary">
-            <span className="badge bg-primary-subtle text-primary me-2">
-              {sortedAndFilteredWords.length}
-            </span>
-            个词汇匹配当前筛选条件。
+          <Typography variant="caption" color="text.secondary">
+            {sortedAndFilteredWords.length > 0
+              ? `找到 ${sortedAndFilteredWords.length} 个匹配结果`
+              : '没有找到匹配的词汇'}
           </Typography>
         </Box>
-      </Paper>
+      </Box>
 
 
       {/* Word List */}
@@ -246,7 +234,7 @@ const WordList = () => {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 }
                   }}>
-                    <WordCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
+                    <VerbCard word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
                   </motion.div>
                 </Grid>
               ))}

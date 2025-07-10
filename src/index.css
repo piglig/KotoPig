@@ -1,9 +1,11 @@
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333; /* Darker text for better contrast */
+  background-color: #121212; /* Match the dark theme background */
 }
 
 code {

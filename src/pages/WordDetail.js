@@ -1,12 +1,50 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useWordContext } from '../contexts/WordContext';
+import {
+  Container,
+  Paper,
+  Typography,
+  Box,
+  IconButton,
+  Button,
+  Chip,
+  Tabs,
+  Tab,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+} from '@mui/material';
+import { ArrowBack, VolumeUp, OpenInNew } from '@mui/icons-material';
+import { motion } from 'framer-motion';
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`word-tabpanel-${index}`}
+      aria-labelledby={`word-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
 
 const WordDetail = () => {
   const { word: wordParam } = useParams();
   const navigate = useNavigate();
   const { words, learnWord, progress } = useWordContext();
   const [word, setWord] = useState(null);
+  const [tabValue, setTabValue] = useState(0);
 
   useEffect(() => {
     if (words.length > 0 && wordParam) {
@@ -15,111 +53,131 @@ const WordDetail = () => {
     }
   }, [words, wordParam]);
 
-  const speak = (text) => {
-    if('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'ja-JP';
-        speechSynthesis.speak(utterance);
+  const handleTabChange = (event, newValue) => {
+    setTabValue(newValue);
+  };
+
+  const speak = (text, e) => {
+    e.stopPropagation();
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ja-JP';
+      window.speechSynthesis.speak(utterance);
     } else {
-        alert('您的浏览器不支持语音朗读功能。');
+      alert('您的浏览器不支持语音朗读功能。');
     }
   };
 
   if (!word) {
-    return <div>加载中或未找到词汇...</div>;
+    return <Container sx={{ py: 4 }}><Typography>加载中或未找到词汇...</Typography></Container>;
   }
 
   const isLearned = !!progress[word.word];
-
-  const typeColorClass = {
-    verb: 'bg-primary',
-    noun: 'bg-success',
-    adjective: 'bg-warning'
-  };
+  const hasForms = word.forms && Object.keys(word.forms).length > 0;
+  const hasExamples = word.examples && word.examples.length > 0;
 
   return (
-    <div>
-      <button className="btn btn-secondary mb-4" onClick={() => navigate(-1)}>← 返回</button>
-      <div className="card">
-        <div className="card-header d-flex flex-column flex-md-row justify-content-between align-items-center p-4">
-          <div className="d-flex align-items-center mb-3 mb-md-0">
-            <h2 className="mb-0 me-3">{word.word} ({word.reading})</h2>
-            <button className="btn btn-sm btn-outline-primary rounded-circle" onClick={() => speak(word.reading)} style={{ width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <i className="bi bi-volume-up-fill"></i>
-            </button>
-          </div>
-          <div className="d-flex flex-wrap justify-content-center">
-            <button className="btn btn-success me-2 mb-2 mb-md-0" onClick={() => learnWord(word)} disabled={isLearned}>
-              {isLearned ? '已在学习计划中' : '添加到学习计划'}
-            </button>
-            <a href={`https://jisho.org/search/${word.word}`} target="_blank" rel="noopener noreferrer" className="btn btn-info mb-2 mb-md-0">在Jisho.org上查看</a>
-          </div>
-        </div>
-        <div className="card-body p-4">
-          <p className="lead mb-3">{word.meaning}</p>
-          <span className={`badge ${typeColorClass[word.type] || 'bg-secondary'}`}>{word.type}</span>
-          {word.group && word.type !== 'noun' && <span className="badge bg-info ms-2">{word.group}</span>}
-          
-          <hr className="my-4" />
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+      <Container sx={{ py: 4 }}>
+        <Button startIcon={<ArrowBack />} onClick={() => navigate(-1)} sx={{ mb: 2 }}>
+          返回列表
+        </Button>
 
-          {(word.type === "verb" || word.type === "adjective") && (
-            <div className="accordion" id="formsAccordion">
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="formsHeading">
-                  <button className="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="true" aria-controls="collapseForms">
-                    {word.type === "verb" ? "动词变形" : "形容词变形"}
-                  </button>
-                </h2>
-                <div id="collapseForms" className="accordion-collapse collapse show" aria-labelledby="formsHeading" data-bs-parent="#formsAccordion">
-                  <div className="accordion-body p-0">
-                    {Object.keys(word.forms).length > 0 ? (
-                      <table className="table table-hover mb-0">
-                        <tbody>
-                          {Object.entries(word.forms).map(([formName, formValue]) => (
-                            <tr key={formName}>
-                              <td className="fw-bold">{formName.replace(/_form/g, '').replace(/_/g, ' ')}</td>
-                              <td>{formValue} <button className="btn btn-sm btn-outline-secondary ms-2" onClick={() => speak(formValue)}><i className="bi bi-volume-up-fill"></i></button></td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    ) : (
-                      <p className="p-3">暂无变形信息。</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
+        <Paper elevation={3} sx={{ borderRadius: 3, overflow: 'hidden' }}>
+          <Box sx={{ p: { xs: 2, md: 4 }, bgcolor: 'primary.main', color: 'primary.contrastText' }}>
+            <Grid container alignItems="center" spacing={2}>
+              <Grid item xs>
+                <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
+                  {word.word}
+                </Typography>
+                <Typography variant="h5" component="span" sx={{ opacity: 0.8 }}>
+                  {word.reading}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <IconButton onClick={(e) => speak(word.reading, e)} sx={{ color: 'primary.contrastText', backgroundColor: 'rgba(255,255,255,0.2)', '&:hover': { backgroundColor: 'rgba(255,255,255,0.3)' } }}>
+                  <VolumeUp />
+                </IconButton>
+              </Grid>
+            </Grid>
+            <Typography variant="h6" sx={{ mt: 2 }}>{word.meaning}</Typography>
+          </Box>
+
+          <Box sx={{ p: { xs: 2, md: 4 } }}>
+            <Grid container spacing={2} alignItems="center">
+              <Grid item>
+                <Chip label={word.type} color="secondary" />
+              </Grid>
+              {word.group && <Grid item><Chip label={`Group: ${word.group}`} /></Grid>}
+              {word.jlpt_level && <Grid item><Chip label={`JLPT: ${word.jlpt_level}`} /></Grid>}
+              <Grid item xs />
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => learnWord(word)}
+                  disabled={isLearned}
+                >
+                  {isLearned ? '已在学习计划' : '加入学习计划'}
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="outlined"
+                  href={`https://jisho.org/search/${word.word}`}
+                  target="_blank"
+                  endIcon={<OpenInNew />}
+                >
+                  Jisho
+                </Button>
+              </Grid>
+            </Grid>
+          </Box>
+
+          <Box sx={{ borderTop: 1, borderColor: 'divider' }}>
+            <Tabs value={tabValue} onChange={handleTabChange} aria-label="word details tabs" variant="fullWidth">
+              {hasForms && <Tab label="活用形" />}
+              {hasExamples && <Tab label="例句" />}
+            </Tabs>
+          </Box>
+
+          {hasForms && (
+            <TabPanel value={tabValue} index={0}>
+              <List>
+                {Object.entries(word.forms).map(([name, form]) => (
+                  <React.Fragment key={name}>
+                    <ListItem>
+                      <ListItemText primary={form} secondary={name.replace(/_/g, ' ')} />
+                      <IconButton onClick={(e) => speak(form, e)} size="small">
+                        <VolumeUp fontSize="inherit" />
+                      </IconButton>
+                    </ListItem>
+                    <Divider component="li" />
+                  </React.Fragment>
+                ))}
+              </List>
+            </TabPanel>
           )}
 
-          <div className="accordion mt-4" id="examplesAccordion">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="examplesHeading">
-                <button className="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExamples" aria-expanded="true" aria-controls="collapseExamples">
-                  例句
-                </button>
-              </h2>
-              <div id="collapseExamples" className="accordion-collapse collapse show" aria-labelledby="examplesHeading" data-bs-parent="#examplesAccordion">
-                <div className="accordion-body">
-                  {word.examples.length > 0 ? (
-                    word.examples.map((ex, index) => (
-                      <div key={index} className="mb-3 p-2 border rounded bg-light">
-                        <p className="mb-1"><strong>{ex.japanese}</strong> <button className="btn btn-sm btn-outline-secondary ms-2" onClick={() => speak(ex.japanese)}><i className="bi bi-volume-up-fill"></i></button></p>
-                        <p className="text-muted mb-1">{ex.reading}</p>
-                        <p className="mb-0">{ex.translation}</p>
-                      </div>
-                    ))
-                  ) : (
-                    <p>暂无例句信息。</p>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+          {hasExamples && (
+            <TabPanel value={tabValue} index={hasForms ? 1 : 0}>
+              <List>
+                {word.examples.map((ex, index) => (
+                  <React.Fragment key={index}>
+                    <ListItem alignItems="flex-start" sx={{ flexDirection: 'column' }}>
+                      <Typography variant="body1">{ex.japanese}</Typography>
+                      <Typography variant="caption" color="text.secondary">{ex.reading}</Typography>
+                      <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>{ex.translation}</Typography>
+                    </ListItem>
+                    <Divider component="li" />
+                  </React.Fragment>
+                ))}
+              </List>
+            </TabPanel>
+          )}
+        </Paper>
+      </Container>
+    </motion.div>
   );
 };
 
