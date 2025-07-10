@@ -1,0 +1,11 @@
+# Task ID: 9
+# Title: AI 推荐系统 (v3+)
+# Status: pending
+# Dependencies: 8 (Not found)
+# Priority: medium
+# Description: 实现词汇优先级排序、记忆路径生成。
+# Details:
+
+
+# Test Strategy:
+

@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: 打卡功能与徽章 (v1)
+# Status: pending
+# Dependencies: 2 (Not found)
+# Priority: medium
+# Description: 实现基本的打卡统计与徽章解锁条件。
+# Details:
+
+
+# Test Strategy:
+

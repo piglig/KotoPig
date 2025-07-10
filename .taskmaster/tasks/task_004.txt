@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: 闪卡练习 (v1)
+# Status: pending
+# Dependencies: 1 (Not found)
+# Priority: medium
+# Description: 实现新 UI 和动画反馈的闪卡练习功能。
+# Details:
+
+
+# Test Strategy:
+

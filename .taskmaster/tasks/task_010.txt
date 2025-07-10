@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: 打卡社区 (v3+)
+# Status: pending
+# Dependencies: 3 (Not found)
+# Priority: medium
+# Description: 增加社交鼓励、PK 模式、好友组队功能。
+# Details:
+
+
+# Test Strategy:
+

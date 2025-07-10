@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: 用户系统与登录 (v1)
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: 使用 Supabase 鉴权。
+# Details:
+
+
+# Test Strategy:
+

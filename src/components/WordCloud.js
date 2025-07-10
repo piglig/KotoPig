@@ -4,7 +4,7 @@ import './WordCloud.css';
 
 const MAX_DISPLAY_WORDS = 50; // Limit the number of words displayed for performance
 
-const WordCloud = ({ words, onSelectWord }) => {
+const WordCloud = ({ words = [], onSelectWord }) => {
   console.log('WordCloud component rendering');
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const [activeWords, setActiveWords] = useState([]);

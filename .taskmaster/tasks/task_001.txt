@@ -1,0 +1,11 @@
+# Task ID: 1
+# Title: 词汇查询与发音 (v1)
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: 基于本地词库/静态数据集，重构搜索展示 UI。
+# Details:
+
+
+# Test Strategy:
+

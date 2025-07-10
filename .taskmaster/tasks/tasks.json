@@ -1,0 +1,98 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "词汇查询与发音 (v1)",
+        "description": "基于本地词库/静态数据集，重构搜索展示 UI。",
+        "status": "pending",
+        "dependencies": []
+      },
+      {
+        "id": "2",
+        "title": "用户系统与登录 (v1)",
+        "description": "使用 Supabase 鉴权。",
+        "status": "pending",
+        "dependencies": []
+      },
+      {
+        "id": "3",
+        "title": "打卡功能与徽章 (v1)",
+        "description": "实现基本的打卡统计与徽章解锁条件。",
+        "status": "pending",
+        "dependencies": [
+          "2"
+        ]
+      },
+      {
+        "id": "4",
+        "title": "闪卡练习 (v1)",
+        "description": "实现新 UI 和动画反馈的闪卡练习功能。",
+        "status": "pending",
+        "dependencies": [
+          "1"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "首页词云展示 (v1)",
+        "description": "在首页动态渲染热门词云。",
+        "status": "pending",
+        "dependencies": [
+          "1"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "动词变形题目模块 (v2)",
+        "description": "构建数据生成引擎，提供评分与讲解。",
+        "status": "pending",
+        "dependencies": [
+          "1"
+        ]
+      },
+      {
+        "id": "7",
+        "title": "学习统计图表 (v2)",
+        "description": "使用 ECharts 展示用户每日学习数据。",
+        "status": "pending",
+        "dependencies": [
+          "2"
+        ]
+      },
+      {
+        "id": "8",
+        "title": "用户词表（收藏/错词） (v2)",
+        "description": "支持导出、自定义列表。",
+        "status": "pending",
+        "dependencies": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "9",
+        "title": "AI 推荐系统 (v3+)",
+        "description": "实现词汇优先级排序、记忆路径生成。",
+        "status": "pending",
+        "dependencies": [
+          "8"
+        ]
+      },
+      {
+        "id": "10",
+        "title": "打卡社区 (v3+)",
+        "description": "增加社交鼓励、PK 模式、好友组队功能。",
+        "status": "pending",
+        "dependencies": [
+          "3"
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-10T12:15:50.717Z",
+      "updated": "2025-07-10T12:15:50.717Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

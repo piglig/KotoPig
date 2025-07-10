@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: 用户词表（收藏/错词） (v2)
+# Status: pending
+# Dependencies: 1 (Not found), 2 (Not found)
+# Priority: medium
+# Description: 支持导出、自定义列表。
+# Details:
+
+
+# Test Strategy:
+

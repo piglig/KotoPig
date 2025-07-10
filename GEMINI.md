@@ -30,6 +30,7 @@ KotoPig 是一个为日语学习者设计的，用于学习和练习动词变化
     - `src/pages`: 与路由对应的顶层页面组件。
     - `src/contexts`: 用于状态管理的 React Context。
     - `src/data`: 应用使用的静态数据文件。
+    - `.taskmaster/docs`: 前端的设计文稿和样例代码
 
 ### 主要命令
 

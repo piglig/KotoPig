@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: 学习统计图表 (v2)
+# Status: pending
+# Dependencies: 2 (Not found)
+# Priority: medium
+# Description: 使用 ECharts 展示用户每日学习数据。
+# Details:
+
+
+# Test Strategy:
+
