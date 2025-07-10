@@ -14,12 +14,22 @@ const HeroImage = styled('div')({
 });
 
 const StatCard = ({ title, value }) => (
-  <Card sx={{ backgroundColor: '#f1e9eb', borderRadius: '12px', p: 2, height: '100%' }}>
-    <CardContent>
-      <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#191012' }}>{title}</Typography>
-      <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: '#191012' }}>{value}</Typography>
-    </CardContent>
-  </Card>
+  <Box sx={{
+    backgroundColor: '#f1e9eb',
+    borderRadius: '12px',
+    p: 3,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 1,
+    height: '100%'
+  }}>
+    <Typography sx={{ fontSize: '1rem', fontWeight: 500, color: '#191012' }}>
+      {title}
+    </Typography>
+    <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: '#191012', lineHeight: 1.25 }}>
+      {value}
+    </Typography>
+  </Box>
 );
 
 const ProgressChart = () => (
@@ -53,19 +63,21 @@ const ChallengingWordRow = ({ word, difficulty }) => (
 const HomePage = () => {
   return (
     <Box sx={{ backgroundColor: '#fff', color: '#191012' }}>
-      <Container maxWidth="md" sx={{ py: 5 }}>
+      <Container maxWidth="lg" sx={{ py: 5 }}>
         <HeroImage />
         <Typography variant="h4" sx={{ fontWeight: 'bold', my: 3, letterSpacing: '-0.033em' }}>
           Your Learning Journey
         </Typography>
-        <Grid container spacing={2} sx={{ mb: 4 }}>
-          <Grid item xs={12} sm={6}>
+        <Grid container spacing={2} sx={{ mb: 4, display: 'flex' }}>
+          <Grid item sx={{ flex: 1 }}>
             <StatCard title="Words Learned" value="300" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item sx={{ flex: 1 }}>
             <StatCard title="Review Streak" value="75" />
           </Grid>
         </Grid>
+
+
 
         <Box sx={{ backgroundColor: '#fff', borderRadius: '12px', border: '1px solid #e3d3d6', p: 3, mb: 4 }}>
           <CardContent>
