@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Card, CardContent, Container, Grid, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Paper } from '@mui/material';
+import { Box, Container, Grid, Typography, List, ListItem, ListItemText, Divider, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Trophy, Star, Fire } from 'phosphor-react';
+import Navbar from '../components/Navbar'; // Import the Navbar component
 
 // Styled components
 const HeroImage = styled('div')({
@@ -63,6 +64,7 @@ const ChallengingWordRow = ({ word, difficulty }) => (
 const HomePage = () => {
   return (
     <Box sx={{ backgroundColor: '#fff', color: '#191012' }}>
+      <Navbar />
       <Container maxWidth="lg" sx={{ py: 5 }}>
         <HeroImage />
         <Typography variant="h4" sx={{ fontWeight: 'bold', my: 3, letterSpacing: '-0.033em' }}>
