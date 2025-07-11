@@ -1,299 +1,193 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kato-Pig Vocabulary</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div class="flex flex-col h-screen">
+<header class="bg-white border-b border-gray-200">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center space-x-8">
+<div class="flex items-center space-x-2">
+<span class="material-icons text-pink-500">pets</span>
+<span class="font-bold text-xl text-gray-800">Kato-Pig</span>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-gray-600 hover:text-gray-900" href="#">Home</a>
+<a class="text-gray-900 font-semibold border-b-2 border-pink-500 pb-1" href="#">Vocabulary</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">Lessons</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">My List</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">Progress</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="bg-gray-100 border border-gray-300 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent" placeholder="Search..." type="text"/>
+</div>
+<button class="text-gray-500 hover:text-gray-700">
+<span class="material-icons">notifications</span>
+</button>
+<button>
+<img alt="User avatar" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqTiiMSF_U0rIUmi_gaIC0fo70FBQVyWnyla-WZsBU2gX3PwzUQ_AOEL_TXr0XOWWSsmClqu2ojjp1hro9R5ZBByCETxJbHrhw6K7Qhm5Q43qbCctowhvaw6ART7T1yArJiq7s_vdQFkaisPvne03VL9VHx6FkN74ain9RPkiQPGB70J2FFHoCxr9T3j0vzWwO9-vsTL0m7Ywq7ZhHFfNzc4tbHT5vBd_VDU66qn78HIfV1X_Wu54YwCB3ZRbd-iifqPSDDwnyaHg"/>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1">
+<div class="bg-white p-4 rounded-xl shadow-sm">
+<div class="relative mb-4">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full bg-gray-100 border border-gray-200 rounded-lg py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Search..." type="text"/>
+</div>
+<div class="space-y-3 max-h-[calc(100vh-200px)] overflow-y-auto pr-2">
+<div class="bg-pink-100 border border-pink-300 rounded-xl p-4 cursor-pointer">
+<h3 class="text-lg font-bold text-pink-800">repetition mark in katakana</h3>
+<div class="flex items-center mt-1">
+<span class="text-xs font-semibold text-pink-700 bg-pink-200 px-2 py-0.5 rounded-full">UPC</span>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-4 hover:border-pink-300 hover:bg-pink-50 transition-colors">
+<h3 class="text-lg font-semibold text-gray-800">voiced repetition mark in katakana</h3>
+<div class="flex items-center mt-1">
+<span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full">UPC</span>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-4 hover:border-pink-300 hover:bg-pink-50 transition-colors">
+<h3 class="text-lg font-semibold text-gray-800">repetition mark in hiragana</h3>
+<div class="flex items-center mt-1">
+<span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full">UPC</span>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-4 hover:border-pink-300 hover:bg-pink-50 transition-colors">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-2xl font-bold text-gray-800">ゝ</h3>
+<p class="text-gray-500">voiced repetition mark in hiragana</p>
+</div>
+<span class="text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">H</span>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-4 hover:border-pink-300 hover:bg-pink-50 transition-colors">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-2xl font-bold text-gray-800">n</h3>
+<p class="text-gray-500">ditto mark</p>
+</div>
+<span class="text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">H</span>
+</div>
+</div>
+<div class="bg-white border border-gray-200 rounded-xl p-4 hover:border-pink-300 hover:bg-pink-50 transition-colors">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-2xl font-bold text-gray-800">仝</h3>
+<p class="text-gray-500">"as above" mark</p>
+</div>
+<span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full">UPC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-8">
+<div class="flex items-start justify-between mb-6">
+<div>
+<div class="flex items-center gap-4">
+<h1 class="text-5xl font-bold text-gray-800">ヽ</h1>
+<button class="text-pink-500 hover:text-pink-600">
+<span class="material-icons text-4xl">volume_up</span>
+</button>
+</div>
+<p class="text-lg text-gray-600 mt-2">repetition mark in katakana</p>
+</div>
+<button class="flex items-center gap-2 text-gray-600 hover:text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-100">
+<span class="material-icons">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="space-y-8">
+<div>
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Pronunciation</h2>
+<div class="flex space-x-2">
+<button class="bg-pink-500 text-white px-6 py-2 rounded-lg font-semibold">Standard</button>
+<button class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300">Slow</button>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Examples</h2>
+<div class="space-y-4">
+<div class="bg-gray-100 p-4 rounded-lg">
+<p class="text-lg text-gray-800">わたしは、日本語を学んでいます。</p>
+<p class="text-gray-600">I am learning Japanese.</p>
+</div>
+<div class="bg-gray-100 p-4 rounded-lg">
+<p class="text-lg text-gray-800">日本語は、とても難しいです。</p>
+<p class="text-gray-600">Japanese is very difficult.</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Verb Conjugation</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-gray-200">
+<th class="py-2 pr-4 font-medium text-gray-500">Form</th>
+<th class="py-2 px-4 font-medium text-gray-500">Positive</th>
+<th class="py-2 pl-4 font-medium text-gray-500">Negative</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr>
+<td class="py-3 pr-4 font-medium text-gray-600">Present</td>
+<td class="py-3 px-4 text-gray-800">行きます</td>
+<td class="py-3 pl-4 text-gray-800">行きません</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 font-medium text-gray-600">Past</td>
+<td class="py-3 px-4 text-gray-800">行きました</td>
+<td class="py-3 pl-4 text-gray-800">行きませんでした</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 font-medium text-gray-600">Te-form</td>
+<td class="py-3 px-4 text-gray-800">行って</td>
+<td class="py-3 pl-4 text-gray-400">-</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 font-medium text-gray-600">Potential</td>
+<td class="py-3 px-4 text-gray-800">行けます</td>
+<td class="py-3 pl-4 text-gray-800">行けません</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Related Grammar</h2>
+<div class="flex space-x-2">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">ます</span>
+<span class="bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium">ません</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
 
-    <title>Stitch Design</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] px-10 py-3">
-          <div class="flex items-center gap-8">
-            <div class="flex items-center gap-4 text-[#111518]">
-              <div class="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_6_330)">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                      fill="currentColor"
-                    ></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <h2 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em]">Koto-Pig</h2>
-            </div>
-            <div class="flex items-center gap-9">
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="#">Lessons</a>
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="#">My List</a>
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="#">Progress</a>
-            </div>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <label class="flex flex-col min-w-40 !h-10 max-w-64">
-              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-                <div
-                  class="text-[#637988] flex border-none bg-[#f0f3f4] items-center justify-center pl-4 rounded-l-lg border-r-0"
-                  data-icon="MagnifyingGlass"
-                  data-size="24px"
-                  data-weight="regular"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                  </svg>
-                </div>
-                <input
-                  placeholder="Search"
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] focus:outline-0 focus:ring-0 border-none bg-[#f0f3f4] focus:border-none h-full placeholder:text-[#637988] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                  value=""
-                />
-              </div>
-            </label>
-            <button
-              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f3f4] text-[#111518] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-            >
-              <div class="text-[#111518]" data-icon="Bell" data-size="20px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                  <path
-                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
-                  ></path>
-                </svg>
-              </div>
-            </button>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_ny0J_re2Fq3ev3JguyK8YJ6vT2dy0Ty1DJKxdfEtAuMZd1k0K30RZjP1vncqm-7f6C9IwANT1BJ598V4CKS8cwOamu_UVxFIuOjGC9F564ohz-wm_Hg2MM_J7YP9Bij1FzwMChr6hOn0I49Lk4HWT9fGcG511blHasb4yrzrpkEvX9dJYNufLdHMhGjs5Bm6xoQGvkmWb3IIrUuS4c5KxVP7Fa4DD29OZltZd0BOTlY9w1AKxPh5iFd8gefcLjuxrGPDxCXtHbWn");'
-            ></div>
-          </div>
-        </header>
-        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col w-80">
-            <div class="px-4 py-3">
-              <label class="flex flex-col min-w-40 h-12 w-full">
-                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-                  <div
-                    class="text-[#637988] flex border-none bg-[#f0f3f4] items-center justify-center pl-4 rounded-l-lg border-r-0"
-                    data-icon="MagnifyingGlass"
-                    data-size="24px"
-                    data-weight="regular"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <input
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] focus:outline-0 focus:ring-0 border-none bg-[#f0f3f4] focus:border-none h-full placeholder:text-[#637988] px-4 rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                    value="日本語"
-                  />
-                  <div class="flex items-center justify-center rounded-r-lg border-l-0 border-none bg-[#f0f3f4] pr-2 pr-4">
-                    <button
-                      class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-transparent text-[#111518] gap-2 text-base font-bold leading-normal tracking-[0.015em] h-auto min-w-0 px-0"
-                    >
-                      <div class="text-[#637988]" data-icon="XCircle" data-size="24px" data-weight="regular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                          <path
-                            d="M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </label>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">日本語</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">日本人</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">本</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">本当</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">本来</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center gap-4 bg-white px-4 min-h-[72px] py-2 justify-between">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111518] text-base font-medium leading-normal line-clamp-1">本気</p>
-                <p class="text-[#637988] text-sm font-normal leading-normal line-clamp-2">Japanese</p>
-              </div>
-              <div class="shrink-0">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-medium leading-normal w-fit"
-                >
-                  <span class="truncate">Add to My List</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <h2 class="text-[#111518] tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">日本語</h2>
-            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">Japanese</p>
-            <h3 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Examples</h3>
-            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">わたしは、日本語を学んでいます。</p>
-            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">I am learning Japanese.</p>
-            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">日本語は、とても難しいです。</p>
-            <p class="text-[#111518] text-base font-normal leading-normal pb-3 pt-1 px-4">Japanese is very difficult.</p>
-            <h3 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Pronunciation</h3>
-            <div class="flex justify-stretch">
-              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">Standard</span>
-                </button>
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">Slow</span>
-                </button>
-              </div>
-            </div>
-            <h3 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Verb Conjugation</h3>
-            <div class="px-4 py-3 @container">
-              <div class="flex overflow-hidden rounded-lg border border-[#dce1e5] bg-white">
-                <table class="flex-1">
-                  <thead>
-                    <tr class="bg-white">
-                      <th class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-120 px-4 py-3 text-left text-[#111518] w-[400px] text-sm font-medium leading-normal">Form</th>
-                      <th class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-240 px-4 py-3 text-left text-[#111518] w-[400px] text-sm font-medium leading-normal">
-                        Positive
-                      </th>
-                      <th class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-360 px-4 py-3 text-left text-[#111518] w-[400px] text-sm font-medium leading-normal">
-                        Negative
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-t border-t-[#dce1e5]">
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111518] text-sm font-normal leading-normal">Present</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">行きます</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">
-                        行きません
-                      </td>
-                    </tr>
-                    <tr class="border-t border-t-[#dce1e5]">
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111518] text-sm font-normal leading-normal">Past</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">
-                        行きました
-                      </td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">
-                        行きませんでした
-                      </td>
-                    </tr>
-                    <tr class="border-t border-t-[#dce1e5]">
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111518] text-sm font-normal leading-normal">Te-form</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">行って</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal"></td>
-                    </tr>
-                    <tr class="border-t border-t-[#dce1e5]">
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111518] text-sm font-normal leading-normal">
-                        Potential
-                      </td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-240 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">行けます</td>
-                      <td class="table-91554e1c-21b3-473e-8361-4e64afed9256-column-360 h-[72px] px-4 py-2 w-[400px] text-[#637988] text-sm font-normal leading-normal">
-                        行けません
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <style>
-                          @container(max-width:120px){.table-91554e1c-21b3-473e-8361-4e64afed9256-column-120{display: none;}}
-                @container(max-width:240px){.table-91554e1c-21b3-473e-8361-4e64afed9256-column-240{display: none;}}
-                @container(max-width:360px){.table-91554e1c-21b3-473e-8361-4e64afed9256-column-360{display: none;}}
-              </style>
-            </div>
-            <h3 class="text-[#111518] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Related Grammar</h3>
-            <div class="flex justify-stretch">
-              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">ます</span>
-                </button>
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">ません</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+</body></html>

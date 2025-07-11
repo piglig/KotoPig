@@ -25,9 +25,6 @@ const KotoPigLogo = (props) => (
   </SvgIcon>
 );
 
-
-
-
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -115,6 +112,7 @@ const LoginPage = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               disabled={loading}
+              autoComplete="email"
               InputLabelProps={{
                 sx: {
                   color: '#974e5b',
@@ -152,6 +150,7 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
               disabled={loading}
+              autoComplete="current-password"
               InputLabelProps={{
                 sx: {
                   color: '#974e5b',

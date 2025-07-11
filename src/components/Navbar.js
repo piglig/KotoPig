@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Box, InputBase, IconButton, Avatar, Menu, MenuItem, Link, SvgIcon } from '@mui/material';
-import { Search as SearchIcon, Notifications as NotificationsIcon, Logout as LogoutIcon, AccountCircle as AccountCircleIcon } from '@mui/icons-material';
+import { AppBar, Toolbar, Typography, Box, InputBase, IconButton, Avatar, Menu, MenuItem, Link, SvgIcon, Divider } from '@mui/material';
+import { Search as SearchIcon, Notifications as NotificationsIcon, Logout as LogoutIcon, AccountCircle as AccountCircleIcon, Settings as SettingsIcon } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -96,7 +96,7 @@ const Navbar = () => {
             <Link component={RouterLink} to="/" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Home</Link>
             <Link href="#" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Lessons</Link>
             <Link href="#" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>My List</Link>
-            <Link href="#" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Progress</Link>
+            <Link component={RouterLink} to="/progress" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Progress</Link>
           </Box>
         </Box>
 
@@ -118,16 +118,54 @@ const Navbar = () => {
           </IconButton>
           <Menu
             anchorEl={anchorEl}
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
+            PaperProps={{
+              sx: {
+                overflow: 'visible',
+                filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.15))',
+                mt: 1.5,
+                '& .MuiAvatar-root': {
+                  width: 32,
+                  height: 32,
+                  ml: -0.5,
+                  mr: 1,
+                },
+                '&:before': {
+                  content: '""',
+                  display: 'block',
+                  position: 'absolute',
+                  top: 0,
+                  right: 14,
+                  width: 10,
+                  height: 10,
+                  bgcolor: 'background.paper',
+                  transform: 'translateY(-50%) rotate(45deg)',
+                  zIndex: 0,
+                },
+              },
+            }}
+            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
+            <Box sx={{ px: 2, py: 1 }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+                {user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email.split('@')[0]}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {user?.email}
+              </Typography>
+            </Box>
+            <Divider />
             <MenuItem onClick={handleMenuClose}>
-              <AccountCircleIcon sx={{ mr: 1 }} /> Profile
+              <AccountCircleIcon sx={{ mr: 1.5 }} /> Profile
             </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+              <SettingsIcon sx={{ mr: 1.5 }} /> Settings
+            </MenuItem>
+            <Divider />
             <MenuItem onClick={handleLogout}>
-              <LogoutIcon sx={{ mr: 1 }} /> Logout
+              <LogoutIcon sx={{ mr: 1.5 }} /> Logout
             </MenuItem>
           </Menu>
         </Box>

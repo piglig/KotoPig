@@ -1,0 +1,6 @@
+feat: Implement and integrate new Navbar component
+
+- Create a new reusable Navbar component based on the provided design mockups.
+- The Navbar includes the app logo, navigation links, a search bar, a notification button, and a user avatar with a dropdown menu.
+- The dropdown menu contains a profile link and a functional logout button.
+- Integrate the new Navbar into the HomePage.

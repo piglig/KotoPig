@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ProgressPage from './pages/ProgressPage'; // Import the new ProgressPage
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme/theme';
 
@@ -28,6 +29,14 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/terms" element={<TermsOfServicePage />} />
               <Route path="/privacy" element={<PrivacyPolicyPage />} />
+              <Route 
+                path="/progress"
+                element={
+                  <ProtectedRoute>
+                    <ProgressPage />
+                  </ProtectedRoute>
+                }
+              />
               <Route 
                 path="/"
                 element={
