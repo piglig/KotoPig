@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koto-Pig Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#fcf8f9] min-h-screen flex flex-col">
+    <!-- ✅ Header 在最顶部 -->
+    <header class="flex items-center justify-between border-b border-[#f3e7ea] px-10 py-3">
+      <div class="flex items-center gap-4 text-[#1b0e10]">
+        <div class="size-4">
+          <svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-lg font-bold leading-tight tracking-tight">Koto-Pig</h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-[#1b0e10] text-sm font-medium" href="#">Home</a>
+          <a class="text-[#1b0e10] text-sm font-medium" href="#">About</a>
+          <a class="text-[#1b0e10] text-sm font-medium" href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ✅ 登录容器区域 -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+      <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <!-- Logo & Title -->
+        <div class="text-center mb-6">
+          <div class="mx-auto mb-3 text-[#e72b4d]">
+            <svg class="w-10 h-10 mx-auto" viewBox="0 0 48 48" fill="currentColor">
+              <path
+                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="text-xl font-bold text-[#1b0e10]">Koto-Pig</h1>
+          <p class="text-sm text-[#974e5b] mt-1">Master Japanese words efficiently</p>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-4">
+          <input
+            type="email"
+            placeholder="Email or Username"
+            class="w-full h-12 rounded-lg border border-[#e7d0d4] bg-[#fcf8f9] px-4 text-sm focus:ring-2 focus:ring-[#e72b4d] focus:outline-none"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="w-full h-12 rounded-lg border border-[#e7d0d4] bg-[#fcf8f9] px-4 text-sm focus:ring-2 focus:ring-[#e72b4d] focus:outline-none"
+          />
+          <div class="text-right">
+            <a href="#" class="text-sm text-[#974e5b] underline">Forgot password?</a>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full h-12 bg-[#e72b4d] text-white font-semibold rounded-full hover:bg-[#c92140] transition"
+          >
+            Login
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="my-6 flex items-center justify-between">
+          <hr class="border-[#e7d0d4] flex-1" />
+          <span class="px-3 text-sm text-[#974e5b]">Or login with</span>
+          <hr class="border-[#e7d0d4] flex-1" />
+        </div>
+
+        <!-- Social login -->
+        <div class="flex flex-col gap-3">
+          <button
+            class="flex items-center justify-center gap-2 h-10 rounded-full bg-white border border-gray-300 text-sm font-semibold text-black hover:bg-gray-50 transition"
+          >
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
+            Login with Google
+          </button>
+          <button
+            class="flex items-center justify-center gap-2 h-10 rounded-full bg-black text-white text-sm font-semibold hover:bg-gray-800 transition"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19.664 13.852c-.098-2.495 2.045-3.686 2.137-3.742-1.163-1.699-2.968-1.931-3.608-1.953-1.533-.155-2.993.902-3.771.902-.776 0-1.971-.878-3.243-.854-1.671.025-3.223.977-4.084 2.482-1.741 3.016-.445 7.476 1.25 9.92.833 1.182 1.822 2.505 3.116 2.456 1.244-.05 1.713-.793 3.217-.793 1.503 0 1.923.793 3.245.77 1.344-.025 2.192-1.184 3.003-2.373.94-1.376 1.326-2.717 1.348-2.788-.03-.014-2.575-1.017-2.616-4.027zm-3.038-7.473c.688-.835 1.154-2.01 1.027-3.179-1.007.04-2.223.675-2.945 1.51-.64.728-1.204 1.899-1.055 3.015 1.115.086 2.286-.565 2.973-1.346z"
+              />
+            </svg>
+            Login with Apple
+          </button>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-sm text-[#974e5b] mt-6">
+          Don’t have an account?
+          <a href="#" class="underline font-medium text-[#e72b4d]">Register</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
