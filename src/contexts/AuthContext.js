@@ -53,6 +53,16 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const loginWithTwitter = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'twitter',
+    });
+    if (error) {
+      console.error('Error logging in with Twitter:', error.message);
+      throw error;
+    }
+  };
+
   const register = async (email, password) => {
     const { data, error } = await supabase.auth.signUp({
       email,
@@ -78,6 +88,7 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated: !!user,
     login,
     loginWithGoogle,
+    loginWithTwitter,
     register,
     logout,
   };

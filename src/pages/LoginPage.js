@@ -15,7 +15,7 @@ import {
   Divider,
   SvgIcon,
 } from '@mui/material';
-import { Google as GoogleIcon } from '@mui/icons-material';
+import { Google as GoogleIcon, Twitter as TwitterIcon } from '@mui/icons-material';
 
 const KotoPigLogo = (props) => (
   <SvgIcon {...props} viewBox="0 0 48 48">
@@ -25,13 +25,7 @@ const KotoPigLogo = (props) => (
   </SvgIcon>
 );
 
-const AppleIcon = (props) => (
-    <SvgIcon {...props} viewBox="0 0 24 24">
-        <path
-            d="M19.664 13.852c-.098-2.495 2.045-3.686 2.137-3.742-1.163-1.699-2.968-1.931-3.608-1.953-1.533-.155-2.993.902-3.771.902-.776 0-1.971-.878-3.243-.854-1.671.025-3.223.977-4.084 2.482-1.741 3.016-.445 7.476 1.25 9.92.833 1.182 1.822 2.505 3.116 2.456 1.244-.05 1.713-.793 3.217-.793 1.503 0 1.923.793 3.245.77 1.344-.025 2.192-1.184 3.003-2.373.94-1.376 1.326-2.717 1.348-2.788-.03-.014-2.575-1.017-2.616-4.027zm-3.038-7.473c.688-.835 1.154-2.01 1.027-3.179-1.007.04-2.223.675-2.945 1.51-.64.728-1.204 1.899-1.055 3.015 1.115.086 2.286-.565 2.973-1.346z"
-        />
-    </SvgIcon>
-);
+
 
 
 const LoginPage = () => {
@@ -39,7 +33,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { login, loginWithGoogle } = useAuth();
+  const { login, loginWithGoogle, loginWithTwitter } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -59,6 +53,14 @@ const LoginPage = () => {
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle();
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const handleTwitterLogin = async () => {
+    try {
+      await loginWithTwitter();
     } catch (err) {
       setError(err.message);
     }
@@ -216,19 +218,20 @@ const LoginPage = () => {
             <Button
               fullWidth
               variant="contained"
-              startIcon={<AppleIcon />}
+              startIcon={<TwitterIcon />}
+              onClick={handleTwitterLogin}
               sx={{
                 py: 1,
                 borderRadius: '999px',
-                bgcolor: 'black',
+                bgcolor: '#1DA1F2', // Twitter Blue
                 color: 'white',
                 textTransform: 'none',
                 fontWeight: 'semibold',
                 fontSize: '16px',
-                '&:hover': { bgcolor: '#333' },
+                '&:hover': { bgcolor: '#1a91da' },
               }}
             >
-              Login with Apple
+              Login with Twitter
             </Button>
           </Box>
 
