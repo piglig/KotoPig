@@ -5,7 +5,9 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { WordProvider } from './contexts/WordContext';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage'; // <-- Import the new page
+import RegisterPage from './pages/RegisterPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme/theme';
 
@@ -24,6 +26,8 @@ function App() {
             <Routes>
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/terms" element={<TermsOfServicePage />} />
+              <Route path="/privacy" element={<PrivacyPolicyPage />} />
               <Route 
                 path="/"
                 element={
