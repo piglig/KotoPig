@@ -1,16 +1,17 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Chip } from '@mui/material';
 
 const WordCard = ({ word, isSelected, onClick }) => {
   // This is a placeholder. In a real app, you'd have a more robust way
   // to determine the tag, likely from the data itself.
   const getTag = () => {
     if (!word || !word.part_of_speech) return null;
-    if (word.part_of_speech.includes('v5u')) return 'U';
-    if (word.part_of_speech.includes('v1')) return 'RU';
+    if (word.part_of_speech.includes('v5u')) return 'UPC';
+    if (word.part_of_speech.includes('v1')) return 'UPC';
     if (word.part_of_speech.includes('adj-i')) return 'I';
     if (word.part_of_speech.includes('adv')) return 'ADV';
-    return 'N'; // Default to Noun
+    if (word.part_of_speech.includes('n')) return 'H';
+    return 'UPC'; // Default
   };
 
   const tag = getTag();
@@ -22,18 +23,17 @@ const WordCard = ({ word, isSelected, onClick }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        minHeight: '72px',
-        px: 2,
-        py: 1,
+        p: 2,
         cursor: 'pointer',
         backgroundColor: isSelected ? '#FBEBEE' : '#fff',
-        border: '2px solid',
-        borderColor: isSelected ? '#E57373' : 'transparent',
+        border: '1px solid',
+        borderColor: isSelected ? '#E57373' : '#e8e8e8',
         borderRadius: '12px',
-        m: 1,
+        mb: 1,
         transition: 'background-color 150ms ease-in-out, border-color 150ms ease-in-out',
         '&:hover': {
-          backgroundColor: isSelected ? '#F8E5E7' : '#F7F7F7',
+          backgroundColor: isSelected ? '#F8E5E7' : '#fafafa',
+          borderColor: isSelected ? '#E57373' : '#d0d0d0',
         },
       }}
     >
@@ -41,10 +41,9 @@ const WordCard = ({ word, isSelected, onClick }) => {
         <Typography
           component="p"
           sx={{
-            color: '#111518',
-            fontSize: '1rem', // text-base
-            fontWeight: 500, // font-medium
-            lineHeight: '1.5rem', // leading-normal
+            color: isSelected ? '#c62828' : '#111518',
+            fontSize: '1rem',
+            fontWeight: 600,
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
@@ -56,35 +55,29 @@ const WordCard = ({ word, isSelected, onClick }) => {
           component="p"
           sx={{
             color: '#637988',
-            fontSize: '0.875rem', // text-sm
-            fontWeight: 400, // font-normal
-            lineHeight: '1.25rem', // leading-normal
+            fontSize: '0.875rem',
+            fontWeight: 400,
+            lineHeight: '1.25rem',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
+            mt: 0.5,
           }}
         >
           {word.english.split(';')[0]}
         </Typography>
       </Box>
       {tag && (
-        <Box
+        <Chip 
+          label={tag}
+          size="small"
           sx={{
             ml: 2,
-            minWidth: 24, // size-6
-            height: 24, // size-6
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#e0e0e0', // A neutral gray
-            color: '#424242',
             fontWeight: 'bold',
-            fontSize: '0.75rem',
+            color: isSelected ? '#c62828' : '#555',
+            backgroundColor: isSelected ? 'rgba(229, 115, 115, 0.2)' : '#e0e0e0',
           }}
-        >
-          {tag}
-        </Box>
+        />
       )}
     </Box>
   );

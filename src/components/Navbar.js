@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Box, InputBase, IconButton, Avatar, Menu, MenuItem, Link, SvgIcon, Divider } from '@mui/material';
-import { Search as SearchIcon, Notifications as NotificationsIcon, Logout as LogoutIcon, AccountCircle as AccountCircleIcon, Settings as SettingsIcon } from '@mui/icons-material';
-import { styled, alpha } from '@mui/material/styles';
-import { Link as RouterLink } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Box, IconButton, Avatar, Menu, MenuItem, Link, SvgIcon, Divider } from '@mui/material';
+import { Notifications as NotificationsIcon, Logout as LogoutIcon, AccountCircle as AccountCircleIcon, Settings as SettingsIcon } from '@mui/icons-material';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 const KotoPigLogo = (props) => (
@@ -22,48 +21,10 @@ const KotoPigLogo = (props) => (
   </SvgIcon>
 );
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.black, 0.05),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.black, 0.1),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
-}));
-
 const Navbar = () => {
   const { user, logout } = useAuth();
   const [anchorEl, setAnchorEl] = useState(null);
+  const location = useLocation();
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -82,6 +43,13 @@ const Navbar = () => {
     }
   };
 
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Lessons', path: '/lessons' }, // Assuming a lessons page
+    { name: 'My List', path: '/mylist' },   // Assuming a mylist page
+    { name: 'Progress', path: '/progress' },
+  ];
+
   return (
     <AppBar position="static" sx={{ bgcolor: 'white', color: '#111518', borderBottom: '1px solid #f0f3f4' }} elevation={0}>
       <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, sm: 5 } }}>
@@ -93,23 +61,51 @@ const Navbar = () => {
             </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
-            <Link component={RouterLink} to="/" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Home</Link>
-            <Link href="#" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Lessons</Link>
-            <Link href="#" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>My List</Link>
-            <Link component={RouterLink} to="/progress" color="inherit" sx={{ textDecoration: 'none', fontWeight: 500 }}>Progress</Link>
+            {navLinks.map((link) => (
+              <Link
+                component={RouterLink}
+                to={link.path}
+                key={link.name}
+                color="inherit"
+                sx={{
+                  textDecoration: 'none',
+                  fontWeight: 500,
+                  position: 'relative',
+                  '&:hover': {
+                    color: 'primary.main',
+                  },
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    width: '100%',
+                    transform: 'scaleX(0)',
+                    height: '2px',
+                    bottom: '-5px',
+                    left: 0,
+                    backgroundColor: 'primary.main',
+                    transformOrigin: 'bottom right',
+                    transition: 'transform 0.25s ease-out',
+                  },
+                  '&:hover::after': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'bottom left',
+                  },
+                  ...(location.pathname === link.path && {
+                    color: 'primary.main',
+                    '&::after': {
+                      transform: 'scaleX(1)',
+                      transformOrigin: 'bottom left',
+                    },
+                  }),
+                }}
+              >
+                {link.name}
+              </Link>
+            ))}
           </Box>
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
           <IconButton size="large" color="inherit">
             <NotificationsIcon />
           </IconButton>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
@@ -8,7 +7,10 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import ProgressPage from './pages/ProgressPage'; // Import the new ProgressPage
+import ProgressPage from './pages/ProgressPage';
+import LessonsPage from './pages/LessonsPage';
+import MyListPage from './pages/MyListPage';
+import Navbar from './components/Navbar';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme/theme';
 
@@ -33,7 +35,26 @@ function App() {
                 path="/progress"
                 element={
                   <ProtectedRoute>
+                    <Navbar />
                     <ProgressPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route 
+                path="/lessons"
+                element={
+                  <ProtectedRoute>
+                    <Navbar />
+                    <LessonsPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route 
+                path="/mylist"
+                element={
+                  <ProtectedRoute>
+                    <Navbar />
+                    <MyListPage />
                   </ProtectedRoute>
                 }
               />
@@ -41,6 +62,7 @@ function App() {
                 path="/"
                 element={
                   <ProtectedRoute>
+                    <Navbar />
                     <HomePage />
                   </ProtectedRoute>
                 }
@@ -54,4 +76,3 @@ function App() {
 }
 
 export default App;
-

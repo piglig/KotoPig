@@ -4,13 +4,13 @@ import { VolumeUp as VolumeUpIcon, Edit as EditIcon } from '@mui/icons-material'
 
 const SectionTitle = ({ children }) => (
   <Typography 
-    variant="h3" 
+    variant="h2" 
     sx={{ 
-      fontSize: '1.25rem', // text-xl
-      fontWeight: 'bold', 
+      fontSize: '1.125rem', // text-xl
+      fontWeight: '600', 
       color: '#111518', 
-      mt: 3, 
-      mb: 1.5 
+      mt: 4, 
+      mb: 2 
     }}
   >
     {children}
@@ -19,16 +19,15 @@ const SectionTitle = ({ children }) => (
 
 const ExampleCard = ({ japanese, translation }) => (
   <Paper 
-    variant="outlined"
+    elevation={0}
     sx={{ 
       p: 2, 
       mb: 1.5, 
       bgcolor: '#f7f8fa', 
-      border: '1px solid #e0e0e0', 
       borderRadius: '12px' 
     }}
   >
-    <Typography variant="body1" sx={{ color: '#111518' }}>{japanese}</Typography>
+    <Typography variant="body1" sx={{ color: '#111518', fontSize: '1.1rem' }}>{japanese}</Typography>
     <Typography variant="body2" sx={{ color: '#637988', mt: 0.5 }}>{translation}</Typography>
   </Paper>
 );
@@ -36,7 +35,7 @@ const ExampleCard = ({ japanese, translation }) => (
 const VerbDetail = ({ verb }) => {
 
   const speak = (text) => {
-    if (!text || !'speechSynthesis' in window) return;
+    if (!text || !('speechSynthesis' in window)) return;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'ja-JP';
     speechSynthesis.speak(utterance);
@@ -56,27 +55,26 @@ const VerbDetail = ({ verb }) => {
   };
 
   return (
-    <Paper elevation={0} sx={{ p: { xs: 2, sm: 4 }, borderRadius: '16px', m: 2, bgcolor: 'white' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          {/* This is a placeholder for the symbol before the title */}
-          <Typography variant="h4" sx={{ fontWeight: 'bold' }}>&#12540;</Typography> 
-          <IconButton onClick={() => speak(verb.furigana)} sx={{ color: '#e72b4d' }}>
-            <VolumeUpIcon />
+    <Paper elevation={2} sx={{ p: { xs: 2, sm: 4 }, borderRadius: '16px', flexGrow: 1, bgcolor: 'white' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Typography variant="h1" sx={{ fontWeight: 'bold', fontSize: { xs: '3rem', md: '4rem' }, color: '#111518' }}>{verb.japanese.charAt(0)}</Typography> 
+          <IconButton onClick={() => speak(verb.japanese)} sx={{ color: '#e72b4d', mt: -2 }}>
+            <VolumeUpIcon sx={{ fontSize: '2rem' }} />
           </IconButton>
         </Box>
-        <Button variant="outlined" startIcon={<EditIcon />} sx={{ textTransform: 'none', color: '#111518', borderColor: '#e0e0e0', borderRadius: '8px' }}>
+        <Button variant="outlined" startIcon={<EditIcon />} sx={{ textTransform: 'none', color: '#111518', borderColor: '#e0e0e0', borderRadius: '8px', flexShrink: 0 }}>
           Edit
         </Button>
       </Box>
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+      <Typography variant="h6" color="text.secondary" sx={{ mb: 2, fontWeight: 500 }}>
         {verb.english}
       </Typography>
 
       <SectionTitle>Pronunciation</SectionTitle>
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-        <Button variant="contained" sx={{ bgcolor: '#e72b4d', '&:hover': { bgcolor: '#c92140' }, textTransform: 'none', borderRadius: '8px', boxShadow: 'none', px: 3 }}>Standard</Button>
-        <Button variant="contained" sx={{ bgcolor: '#f0f3f4', color: '#111518', '&:hover': { bgcolor: '#e0e3e4' }, textTransform: 'none', borderRadius: '8px', boxShadow: 'none', px: 3 }}>Slow</Button>
+        <Button variant="contained" sx={{ bgcolor: '#e72b4d', '&:hover': { bgcolor: '#c92140' }, textTransform: 'none', borderRadius: '8px', boxShadow: 'none', px: 3, py: 1 }}>Standard</Button>
+        <Button variant="contained" sx={{ bgcolor: '#f0f3f4', color: '#111518', '&:hover': { bgcolor: '#e0e3e4' }, textTransform: 'none', borderRadius: '8px', boxShadow: 'none', px: 3, py: 1 }}>Slow</Button>
       </Box>
 
       <SectionTitle>Examples</SectionTitle>
@@ -89,15 +87,15 @@ const VerbDetail = ({ verb }) => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell sx={{ fontWeight: 'bold' }}>Form</TableCell>
-              <TableCell sx={{ fontWeight: 'bold' }}>Positive</TableCell>
-              <TableCell sx={{ fontWeight: 'bold' }}>Negative</TableCell>
+              <TableCell sx={{ fontWeight: 500, color: 'text.secondary' }}>Form</TableCell>
+              <TableCell sx={{ fontWeight: 500, color: 'text.secondary' }}>Positive</TableCell>
+              <TableCell sx={{ fontWeight: 500, color: 'text.secondary' }}>Negative</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {Object.entries(conjugations).map(([form, values]) => (
               <TableRow key={form} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell component="th" scope="row">{form}</TableCell>
+                <TableCell component="th" scope="row" sx={{ fontWeight: 500 }}>{form}</TableCell>
                 <TableCell>{values.positive || '-'}</TableCell>
                 <TableCell>{values.negative || '-'}</TableCell>
               </TableRow>
@@ -108,8 +106,8 @@ const VerbDetail = ({ verb }) => {
 
       <SectionTitle>Related Grammar</SectionTitle>
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-        <Chip label="ます" sx={{ bgcolor: '#e6f5ec', color: '#268c60', fontWeight: 500, borderRadius: '8px' }} />
-        <Chip label="ません" sx={{ bgcolor: '#fcebea', color: '#c0392b', fontWeight: 500, borderRadius: '8px' }} />
+        <Chip label="ます" sx={{ bgcolor: '#e6f5ec', color: '#268c60', fontWeight: 500, borderRadius: '8px', p: '4px' }} />
+        <Chip label="ません" sx={{ bgcolor: '#fcebea', color: '#c0392b', fontWeight: 500, borderRadius: '8px', p: '4px' }} />
       </Box>
     </Paper>
   );
