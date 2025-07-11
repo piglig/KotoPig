@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <AuthProvider>
         <WordProvider>
-          <Router basename="/KotoPig">
+          <Router>
             <Routes>
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
