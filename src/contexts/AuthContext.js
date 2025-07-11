@@ -43,6 +43,16 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const loginWithGoogle = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+    });
+    if (error) {
+      console.error('Error logging in with Google:', error.message);
+      throw error;
+    }
+  };
+
   const register = async (email, password) => {
     const { data, error } = await supabase.auth.signUp({
       email,
@@ -67,6 +77,7 @@ export const AuthProvider = ({ children }) => {
     user,
     isAuthenticated: !!user,
     login,
+    loginWithGoogle,
     register,
     logout,
   };

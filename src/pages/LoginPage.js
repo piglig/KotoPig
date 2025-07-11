@@ -39,7 +39,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { login } = useAuth();
+  const { login, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -53,6 +53,14 @@ const LoginPage = () => {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle();
+    } catch (err) {
+      setError(err.message);
     }
   };
 
@@ -191,6 +199,7 @@ const LoginPage = () => {
               fullWidth
               variant="outlined"
               startIcon={<GoogleIcon />}
+              onClick={handleGoogleLogin}
               sx={{
                 py: 1,
                 borderRadius: '999px',
