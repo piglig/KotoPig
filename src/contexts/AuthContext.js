@@ -56,9 +56,6 @@ export const AuthProvider = ({ children }) => {
   const loginWithTwitter = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'twitter',
-      options: {
-        redirectTo: window.location.origin,
-      },
     });
     if (error) {
       console.error('Error logging in with Twitter:', error.message);
