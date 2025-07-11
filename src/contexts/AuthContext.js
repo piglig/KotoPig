@@ -43,6 +43,18 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const register = async (email, password) => {
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+    if (error) {
+      console.error('Error signing up:', error.message);
+      throw error;
+    }
+    return data;
+  };
+
   const logout = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
@@ -55,6 +67,7 @@ export const AuthProvider = ({ children }) => {
     user,
     isAuthenticated: !!user,
     login,
+    register,
     logout,
   };
 
