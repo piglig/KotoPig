@@ -113,32 +113,6 @@ const LoginPage = () => {
               required
               disabled={loading}
               autoComplete="email"
-              InputLabelProps={{
-                sx: {
-                  color: '#974e5b',
-                  '&.Mui-focused': {
-                    color: '#e72b4d',
-                  },
-                },
-              }}
-              inputProps={{
-                sx: { color: '#1b0e10' },
-              }}
-              sx={{
-                '& .MuiOutlinedInput-root': {
-                  borderRadius: '8px',
-                  backgroundColor: '#fcf8f9',
-                  '& fieldset': { borderColor: '#e7d0d4' },
-                  '&:hover fieldset': { borderColor: '#e72b4d' },
-                  '&.Mui-focused fieldset': { borderColor: '#e72b4d' },
-                },
-                '& input:-webkit-autofill': {
-                  WebkitBoxShadow: '0 0 0 1000px #fcf8f9 inset',
-                  WebkitTextFillColor: '#1b0e10',
-                  transition: 'background-color 5000s ease-in-out 0s',
-                  caretColor: '#1b0e10',
-                },
-              }}
             />
             <TextField
               type="password"
@@ -151,27 +125,6 @@ const LoginPage = () => {
               required
               disabled={loading}
               autoComplete="current-password"
-              InputLabelProps={{
-                sx: {
-                  color: '#974e5b',
-                  '&.Mui-focused': {
-                    color: '#e72b4d',
-                  },
-                },
-              }}
-              inputProps={{
-                sx: { color: '#1b0e10' },
-              }}
-              sx={{
-                mb: 1,
-                '& .MuiOutlinedInput-root': {
-                  borderRadius: '8px',
-                  backgroundColor: '#fcf8f9',
-                  '& fieldset': { borderColor: '#e7d0d4' },
-                  '&:hover fieldset': { borderColor: '#e72b4d' },
-                  '&.Mui-focused fieldset': { borderColor: '#e72b4d' },
-                },
-              }}
             />
             <Box sx={{ textAlign: 'right', mb: 2 }}>
               <Link href="#" variant="body2" sx={{ color: '#974e5b', textDecoration: 'underline' }}>

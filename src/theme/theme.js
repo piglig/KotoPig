@@ -1,9 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 
-// A custom theme for this app
 const theme = createTheme({
   palette: {
-    mode: 'light', // Change to light mode to match the login page design
+    mode: 'light',
     primary: {
       main: '#e72b4d',
     },
@@ -71,6 +70,52 @@ const theme = createTheme({
             color: '#c0392b',
           }),
         }),
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        variant: 'outlined',
+        margin: 'normal',
+        fullWidth: true,
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          backgroundColor: '#fcf8f9',
+          '& fieldset': {
+            borderColor: '#e7d0d4',
+          },
+          '&:hover fieldset': {
+            borderColor: '#e72b4d',
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: '#e72b4d',
+          },
+          '&.Mui-error fieldset': {
+            borderColor: '#e72b4d',
+          },
+        },
+        input: {
+          color: '#1b0e10',
+          '&:-webkit-autofill': {
+            WebkitBoxShadow: '0 0 0 1000px #fcf8f9 inset',
+            WebkitTextFillColor: '#1b0e10',
+            caretColor: '#1b0e10',
+            transition: 'background-color 5000s ease-in-out 0s',
+          },
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: '#974e5b',
+          '&.Mui-focused': {
+            color: '#e72b4d',
+          },
+        },
       },
     },
   },

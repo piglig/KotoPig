@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Box, Grid, InputBase, Typography, CircularProgress, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
-import { Search as SearchIcon } from '@mui/icons-material';
+import { Box, Grid, InputBase, Typography, CircularProgress, Select, MenuItem, FormControl, InputLabel, TextField, InputAdornment } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 import WordCard from '../components/WordCard';
 import VocabularyDetailView from '../components/VocabularyDetailView';
@@ -123,26 +123,48 @@ const HomePage = () => {
                 color: '#9ca3af' 
               }} 
             />
-            <InputBase
+            <TextField
               placeholder="Search..."
+              variant="outlined"
+              size="small"
+              value={searchTerm}
+              onChange={handleSearchChange}
               fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon sx={{ color: '#a87783' }} />
+                  </InputAdornment>
+                ),
+              }}
               sx={{
                 bgcolor: '#f3e7ea',
                 borderRadius: '8px',
-                py: 1,
-                pl: 5,
-                pr: 2,
-                fontSize: '0.875rem',
-                border: '1px solid #f3e7ea',
-                '&:focus-within': { 
-                  outline: '2px solid #e72b4d', 
-                  outlineOffset: '2px',
-                  borderColor: '#e72b4d'
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '8px',
+                  backgroundColor: '#f3e7ea',
+                  '& fieldset': {
+                    borderColor: '#f3e7ea',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#e0c8cc',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#e9c4cc',
+                    boxShadow: '0 0 0 3px rgba(233, 196, 204, 0.4)',
+                  },
+                },
+                '& input': {
+                  fontSize: '0.875rem',
+                  color: '#4b3b40',
+                },
+                '& input::placeholder': {
+                  opacity: 0.6,
                 }
               }}
-              value={searchTerm}
-              onChange={handleSearchChange}
             />
+
+
           </Box>
 
           {/* Part of Speech Filter */}
