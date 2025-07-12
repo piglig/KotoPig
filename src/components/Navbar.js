@@ -1,25 +1,10 @@
 
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Box, IconButton, Avatar, Menu, MenuItem, Link, SvgIcon, Divider } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton, Avatar, Menu, MenuItem, Link, Divider } from '@mui/material';
 import { Notifications as NotificationsIcon, Logout as LogoutIcon, AccountCircle as AccountCircleIcon, Settings as SettingsIcon } from '@mui/icons-material';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-
-const KotoPigLogo = (props) => (
-  <SvgIcon {...props} viewBox="0 0 48 48" fill="none">
-    <g clipPath="url(#clip0_6_330)">
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-        fill="currentColor"
-      ></path>
-    </g>
-    <defs>
-      <clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath>
-    </defs>
-  </SvgIcon>
-);
+import KotoPigLogo from './KotoPigLogo';
 
 const Navbar = () => {
   const { user, logout } = useAuth();

@@ -27,49 +27,64 @@ function App() {
       <AuthProvider>
         <WordProvider>
           <Router>
-            <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-              <Navbar />
-              <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
-                <Routes>
-                  <Route path="/login" element={<LoginPage />} />
-                  <Route path="/register" element={<RegisterPage />} />
-                  <Route path="/terms" element={<TermsOfServicePage />} />
-                  <Route path="/privacy" element={<PrivacyPolicyPage />} />
-                  <Route 
-                    path="/progress"
-                    element={
-                      <ProtectedRoute>
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/terms" element={<TermsOfServicePage />} />
+              <Route path="/privacy" element={<PrivacyPolicyPage />} />
+              <Route 
+                path="/progress"
+                element={
+                  <ProtectedRoute>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+                      <Navbar />
+                      <Box component="main" sx={{ flexGrow: 1, overflow: 'auto' }}>
                         <ProgressPage />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route 
-                    path="/lessons"
-                    element={
-                      <ProtectedRoute>
+                      </Box>
+                    </Box>
+                  </ProtectedRoute>
+                }
+              />
+              <Route 
+                path="/lessons"
+                element={
+                  <ProtectedRoute>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+                      <Navbar />
+                      <Box component="main" sx={{ flexGrow: 1, overflow: 'auto' }}>
                         <LessonsPage />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route 
-                    path="/mylist"
-                    element={
-                      <ProtectedRoute>
+                      </Box>
+                    </Box>
+                  </ProtectedRoute>
+                }
+              />
+              <Route 
+                path="/mylist"
+                element={
+                  <ProtectedRoute>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+                      <Navbar />
+                      <Box component="main" sx={{ flexGrow: 1, overflow: 'auto' }}>
                         <MyListPage />
-                      </ProtectedRoute>
-                    }
-                  />
-                  <Route 
-                    path="/"
-                    element={
-                      <ProtectedRoute>
+                      </Box>
+                    </Box>
+                  </ProtectedRoute>
+                }
+              />
+              <Route 
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+                      <Navbar />
+                      <Box component="main" sx={{ flexGrow: 1, overflow: 'auto' }}>
                         <HomePage />
-                      </ProtectedRoute>
-                    }
-                  />
-                </Routes>
-              </Box>
-            </Box>
+                      </Box>
+                    </Box>
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
           </Router>
         </WordProvider>
       </AuthProvider>
