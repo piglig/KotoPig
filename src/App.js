@@ -12,6 +12,7 @@ import LessonsPage from './pages/LessonsPage';
 import MyListPage from './pages/MyListPage';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import theme from './theme/theme';
 
 // A wrapper for protected routes
@@ -26,53 +27,55 @@ function App() {
       <AuthProvider>
         <WordProvider>
           <Router>
-            <Routes>
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-              <Route path="/terms" element={<TermsOfServicePage />} />
-              <Route path="/privacy" element={<PrivacyPolicyPage />} />
-              <Route 
-                path="/progress"
-                element={
-                  <ProtectedRoute>
-                    <Navbar />
-                    <ProgressPage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route 
-                path="/lessons"
-                element={
-                  <ProtectedRoute>
-                    <Navbar />
-                    <LessonsPage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route 
-                path="/mylist"
-                element={
-                  <ProtectedRoute>
-                    <Navbar />
-                    <MyListPage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route 
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <Navbar />
-                    <HomePage />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
+            <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+              <Navbar />
+              <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
+                <Routes>
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/register" element={<RegisterPage />} />
+                  <Route path="/terms" element={<TermsOfServicePage />} />
+                  <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                  <Route 
+                    path="/progress"
+                    element={
+                      <ProtectedRoute>
+                        <ProgressPage />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route 
+                    path="/lessons"
+                    element={
+                      <ProtectedRoute>
+                        <LessonsPage />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route 
+                    path="/mylist"
+                    element={
+                      <ProtectedRoute>
+                        <MyListPage />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route 
+                    path="/"
+                    element={
+                      <ProtectedRoute>
+                        <HomePage />
+                      </ProtectedRoute>
+                    }
+                  />
+                </Routes>
+              </Box>
+            </Box>
           </Router>
         </WordProvider>
       </AuthProvider>
     </ThemeProvider>
   );
 }
+
 
 export default App;

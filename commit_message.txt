@@ -1,0 +1,10 @@
+feat: Improve search functionality and UI/UX
+
+This commit introduces several improvements to the search functionality and overall user experience:
+
+- Enhanced Search Input: Implemented search trigger on Enter key press and search icon click, replacing the previous debounce mechanism. This provides a more intuitive search experience.
+- Smooth Loading Animation: Modified the loading indicator to display as a semi-transparent overlay, allowing users to see existing content while new results are fetched.
+- Animated Search Results: Integrated framer-motion to add smooth fade-in/fade-out animations for WordCard components, making search result updates more visually appealing.
+- Optimized Data Fetching: Refactored WordContext to prevent page flickering during search by avoiding immediate clearing of results and ensuring a seamless transition between old and new data.
+- Multi-character Search Support: Updated search logic to correctly handle multi-character inputs, allowing for more flexible search queries.
+- Layout Fix: Adjusted the main layout in App.js to correctly account for the Navbar height, resolving the page scrollbar issue.

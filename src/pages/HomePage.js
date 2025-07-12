@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Box, Grid, InputBase, Typography, CircularProgress, Select, MenuItem, FormControl, InputLabel, TextField, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { AnimatePresence } from 'framer-motion';
 
 import WordCard from '../components/WordCard';
 import VocabularyDetailView from '../components/VocabularyDetailView';
@@ -46,9 +47,17 @@ const HomePage = () => {
   }, [hasMore, fetchingMore, fetchMoreWords, searchTerm, partOfSpeechFilter]);
 
   const handleSearchChange = (e) => {
-    const newSearchTerm = e.target.value;
-    setSearchTerm(newSearchTerm);
-    searchWords(newSearchTerm, partOfSpeechFilter);
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearchKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      searchWords(searchTerm, partOfSpeechFilter);
+    }
+  };
+
+  const handleSearchClick = () => {
+    searchWords(searchTerm, partOfSpeechFilter);
   };
 
   const handlePartOfSpeechChange = (e) => {
@@ -57,15 +66,7 @@ const HomePage = () => {
     searchWords(searchTerm, newFilter);
   };
 
-  if (loading) {
-    return (
-      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
-          <CircularProgress />
-        </Box>
-      </Box>
-    );
-  }
+  
 
   if (error) {
     return (
@@ -87,11 +88,31 @@ const HomePage = () => {
         flexDirection: { xs: 'column', lg: 'row' }, 
         gap: 3, 
         p: 3, 
-        height: '100vh',
+        height: '100%',
         bgcolor: '#fcf8f9',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        position: 'relative' // Add position relative for absolute positioning of overlay
       }}
     >
+      {/* Loading Overlay */}
+      {loading && (
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            bgcolor: 'rgba(255, 255, 255, 0.7)', // Semi-transparent white background
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1000, // Ensure it's on top
+          }}
+        >
+          <CircularProgress sx={{ color: '#e72b4d' }} />
+        </Box>
+      )}
       {/* Left Sidebar: Search and Word List */}
       <Box 
         sx={{ 
@@ -129,10 +150,11 @@ const HomePage = () => {
               size="small"
               value={searchTerm}
               onChange={handleSearchChange}
+              onKeyPress={handleSearchKeyPress}
               fullWidth
               InputProps={{
                 startAdornment: (
-                  <InputAdornment position="start">
+                  <InputAdornment position="start" onClick={handleSearchClick} sx={{ cursor: 'pointer' }}>
                     <SearchIcon sx={{ color: '#a87783' }} />
                   </InputAdornment>
                 ),
@@ -211,14 +233,16 @@ const HomePage = () => {
               }
             }}
           >
-            {words.map((word) => (
-              <WordCard 
-                key={word.id} 
-                word={word} 
-                isSelected={selectedWord?.id === word.id}
-                onClick={() => setSelectedWord(word)}
-              />
-            ))}
+            <AnimatePresence>
+              {words.map((word) => (
+                <WordCard 
+                  key={word.id} 
+                  word={word} 
+                  isSelected={selectedWord?.id === word.id}
+                  onClick={() => setSelectedWord(word)}
+                />
+              ))}
+            </AnimatePresence>
             {fetchingMore && (
               <Box sx={{ display: 'flex', justifyContent: 'center', py: 2 }}>
                 <CircularProgress size={24} sx={{ color: '#e72b4d' }} />

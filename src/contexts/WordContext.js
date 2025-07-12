@@ -15,7 +15,6 @@ export const WordProvider = ({ children }) => {
 
   const fetchWords = async (currentPage, searchTerm = '', partOfSpeechFilter = 'All', reset = false) => {
     if (reset) {
-      setWords([]);
       setPage(0);
       setHasMore(true);
     }
@@ -36,9 +35,13 @@ export const WordProvider = ({ children }) => {
         .select('id, japanese, english, furigana, part_of_speech, jlpt_level');
 
       if (searchTerm) {
-        query = query.or(
-          `japanese.ilike.%${searchTerm}%,english.ilike.%${searchTerm}%,furigana.ilike.%${searchTerm}%`
-        );
+        const terms = searchTerm.split(' ').filter(term => term.trim() !== '');
+        if (terms.length > 0) {
+          const conditions = terms.map(term =>
+            `japanese.ilike.%${term}%,english.ilike.%${term}%,furigana.ilike.%${term}%`
+          ).join(',');
+          query = query.or(conditions);
+        }
       }
 
       if (partOfSpeechFilter !== 'All') {

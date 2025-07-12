@@ -37,7 +37,7 @@ src/
 │   ├── WordCloud.js    # Visual word cloud display
 │   └── Quiz*.js        # Quiz and flashcard components
 ├── pages/              # Route-level page components
-│   ├── HomePage.js     # Main dashboard
+│   ├── HomePage.js     # Main dashboard and Searchable word browser
 │   ├── WordList.js     # Searchable word browser
 │   └── *Page.js        # Other authenticated pages
 ├── contexts/           # Global state management
