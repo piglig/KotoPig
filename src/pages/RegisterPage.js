@@ -54,7 +54,7 @@ const RegisterPage = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#1b0e10' }}>
             <KotoPigLogo sx={{ fontSize: 24 }} />
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-              Koto-Pig
+              KotoPig
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 4 }}>

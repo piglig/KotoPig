@@ -24,7 +24,7 @@ const TermsOfServicePage = () => {
           <Link component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#1b0e10', textDecoration: 'none' }}>
             <KotoPigLogo sx={{ fontSize: 28 }} />
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-              Koto-Pig
+              KotoPig
             </Typography>
           </Link>
         </Toolbar>
@@ -41,7 +41,7 @@ const TermsOfServicePage = () => {
 
           <Section title="1. Acceptance of Terms">
             <Typography paragraph>
-              By accessing or using Koto-Pig (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service. This is a placeholder document and does not constitute legal advice.
+              By accessing or using KotoPig (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service. This is a placeholder document and does not constitute legal advice.
             </Typography>
           </Section>
 
@@ -99,7 +99,7 @@ const TermsOfServicePage = () => {
 
       <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', textAlign: 'center', color: '#974e5b' }}>
         <Typography variant="body2">
-          &copy; {new Date().getFullYear()} Koto-Pig. All Rights Reserved.
+          &copy; {new Date().getFullYear()} KotoPig. All Rights Reserved.
         </Typography>
         <Link component={RouterLink} to="/" color="inherit" sx={{ ml: 1 }}>
           Return to Home

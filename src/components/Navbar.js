@@ -42,7 +42,7 @@ const Navbar = () => {
           <Link component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#111518', textDecoration: 'none' }}>
             <KotoPigLogo sx={{ fontSize: 28 }} />
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', display: { xs: 'none', sm: 'block' } }}>
-              Koto-Pig
+              KotoPig
             </Typography>
           </Link>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>

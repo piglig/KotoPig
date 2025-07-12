@@ -68,7 +68,7 @@ const LoginPage = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#1b0e10' }}>
             <KotoPigLogo sx={{ fontSize: 24 }} />
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-              Koto-Pig
+              KotoPig
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 4 }}>
@@ -83,7 +83,7 @@ const LoginPage = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 3 }}>
             <KotoPigLogo sx={{ fontSize: 40, color: '#e72b4d', mb: 1.5 }} />
             <Typography component="h1" variant="h5" sx={{ fontWeight: 'bold', color: '#1b0e10' }}>
-              Koto-Pig
+              KotoPig
             </Typography>
             <Typography variant="body2" sx={{ color: '#974e5b', mt: 0.5 }}>
               Master Japanese words efficiently

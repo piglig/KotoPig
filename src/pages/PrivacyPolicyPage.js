@@ -24,7 +24,7 @@ const PrivacyPolicyPage = () => {
           <Link component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#1b0e10', textDecoration: 'none' }}>
             <KotoPigLogo sx={{ fontSize: 28 }} />
             <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
-              Koto-Pig
+              KotoPig
             </Typography>
           </Link>
         </Toolbar>
@@ -41,7 +41,7 @@ const PrivacyPolicyPage = () => {
 
           <Section title="Introduction">
             <Typography paragraph>
-              Welcome to Koto-Pig. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose your information. This is a placeholder document and does not constitute legal advice.
+              Welcome to KotoPig. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose your information. This is a placeholder document and does not constitute legal advice.
             </Typography>
           </Section>
 
@@ -124,7 +124,7 @@ const PrivacyPolicyPage = () => {
 
       <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', textAlign: 'center', color: '#974e5b' }}>
         <Typography variant="body2">
-          &copy; {new Date().getFullYear()} Koto-Pig. All Rights Reserved.
+          &copy; {new Date().getFullYear()} KotoPig. All Rights Reserved.
         </Typography>
         <Link component={RouterLink} to="/" color="inherit" sx={{ ml: 1 }}>
           Return to Home

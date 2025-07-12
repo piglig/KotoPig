@@ -19,7 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Architecture Overview
 
 ### Frontend Architecture
-This is a React SPA built with Create React App that implements a Japanese vocabulary learning platform called "Koto-Pig v2". The app uses a modern component-based architecture with:
+This is a React SPA built with Create React App that implements a Japanese vocabulary learning platform called "KotoPig v2". The app uses a modern component-based architecture with:
 
 - **Authentication**: Supabase Auth with email/password and OAuth (Google, Twitter)
 - **State Management**: React Context API with two main contexts:
