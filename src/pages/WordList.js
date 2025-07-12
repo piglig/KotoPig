@@ -3,7 +3,28 @@ import { useWordContext } from '../contexts/WordContext';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import WordListItem from '../components/WordListItem';
-import WordDetailDisplay from '../components/WordDetailDisplay';
+import VocabularyDetailView from '../components/VocabularyDetailView';
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  AppBar,
+  Toolbar,
+  Container,
+  Paper,
+  Link,
+  SvgIcon,
+  InputAdornment,
+  IconButton,
+  Select,
+  MenuItem,
+  CircularProgress,
+} from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SearchIcon from '@mui/icons-material/Search';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 const WORDS_PER_LOAD = 30; // Number of words to load at a time
 
@@ -85,90 +106,142 @@ const WordList = () => {
   }, [searchTerm, selectedType, sortBy]);
 
   return (
-    <div className="bg-gray-50 text-gray-800">
-      <header className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="flex items-center space-x-8">
-            <h1 className="text-xl font-bold text-gray-900">Kato-Pig</h1>
-            <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-              <a className="text-gray-600 hover:text-gray-900" href="#">Home</a>
-              <a className="text-gray-600 hover:text-gray-900" href="#">Lessons</a>
-              <a className="text-gray-900 font-semibold border-b-2 border-indigo-500 pb-1" href="#">My List</a>
-              <a className="text-gray-600 hover:text-gray-900" href="#">Progress</a>
-            </nav>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="relative">
-              <span className="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
-              <input className="bg-gray-100 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-48" placeholder="Search..." type="text" />
-            </div>
-            <button className="text-gray-500 hover:text-gray-700">
-              <span className="material-icons">notifications</span>
-            </button>
-            <button className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-white font-bold">
-              <img alt="User avatar" className="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsw9vogSVSwFNMyKxsh1G1Pncxrzm1fMYC0iNSJ10t9Zc758lcwTGWbQ1U8Usbw7oX7IeOO2Sv3KYklM_xg8kLzZmEsLsxz08Y2gO6oAVfEVuSyDH1towuoXNtpHuCKSol82TOmi6d56ILFVjdSUWlxs9-rVc6LdIhxccKssE6Pd1DKtiqd1GLRUbWPob24WkYxQ2mov4pdYWWuvbx6-AnKnGVirW7F0tUQezFcNT0gFt2ZHsnUSbLv1OMBSYhxKmU2thlPxOqnw" />
-            </button>
-          </div>
-        </div>
-      </header>
-      <main className="container mx-auto p-6">
-        <div className="flex flex-col lg:flex-row gap-6">
-          <aside className="w-full lg:w-1/3 xl:w-1/4">
-            <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 h-full">
-              <div className="relative mb-4">
-                <span className="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
-                <input
-                  className="bg-gray-100 rounded-lg w-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  placeholder="Search..."
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-              <div className="mb-4">
-                <label className="text-sm font-medium text-gray-700 block mb-2" htmlFor="verb-type">基本タイプ</label>
-                <select
-                  className="w-full bg-white border border-gray-300 rounded-md py-2 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  id="verb-type"
-                  value={selectedType}
-                  onChange={(e) => setSelectedType(e.target.value)}
-                >
-                  <option value="">所有</option>
-                  {types.map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="space-y-2 overflow-y-auto max-h-[calc(100vh-250px)] pr-2">
-                {/* Word List Items will go here */}
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', bgcolor: '#fcf8f9' }}>
+      <AppBar position="static" elevation={0} sx={{ bgcolor: 'transparent', borderBottom: '1px solid #f3e7ea' }}>
+        <Toolbar sx={{ justifyContent: 'space-between', px: 5, py: 1.5 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#1b0e10' }}>
+            <KotoPigLogo sx={{ fontSize: 24 }} />
+            <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+              Koto-Pig
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', gap: 4 }}>
+            <Link component={RouterLink} to="/" color="#1b0e10" sx={{ textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Home</Link>
+            <Link component={RouterLink} to="/lessons" color="#1b0e10" sx={{ textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Lessons</Link>
+            <Link component={RouterLink} to="/mylist" color="#e72b4d" sx={{ textDecoration: 'none', fontSize: '14px', fontWeight: 500, borderBottom: '2px solid #e72b4d', pb: '3px' }}>My List</Link>
+            <Link component={RouterLink} to="/progress" color="#1b0e10" sx={{ textDecoration: 'none', fontSize: '14px', fontWeight: 500 }}>Progress</Link>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <TextField
+              variant="outlined"
+              placeholder="Search..."
+              size="small"
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: '999px',
+                  backgroundColor: '#f3e7ea',
+                  '& fieldset': { borderColor: 'transparent' },
+                  '&:hover fieldset': { borderColor: '#e72b4d' },
+                  '&.Mui-focused fieldset': { borderColor: '#e72b4d' },
+                },
+                '& input': {
+                  color: '#1b0e10',
+                  py: '8px',
+                  pl: '10px',
+                },
+              }}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon sx={{ color: '#974e5b' }} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <IconButton sx={{ color: '#974e5b' }}>
+              <NotificationsIcon />
+            </IconButton>
+            <Button sx={{ width: 32, height: 32, borderRadius: '50%', p: 0, minWidth: 0 }}>
+              <img alt="User avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsw9vogSVSwFNMyKxsh1G1Pncxrzm1fMYC0iNSJ10t9Zc758lcwTGWbQ1U8Usbw7oX7IeOO2Sv3KYklM_xg8kLzZmEsLsxz08Y2gO6oAVfEVuSyDH1towuoXNtpHuCKSol82TOmi6d56ILFVjdSUWlxs9-rVc6LdIhxccKssE6Pd1DKtiqd1GLRUbWPob24WkYxQ2mov4pdYWWuvbx6-AnKnGVirW7F0tUQezFcNT0gFt2ZHsnUSbLv1OMBSYhxKmU2thlPxOqnw" />
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Container component="main" sx={{ p: 3 }}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: 3 }}>
+          <Box sx={{ width: { xs: '100%', lg: '33.33%', xl: '25%' } }}>
+            <Paper elevation={3} sx={{ p: 3, borderRadius: '16px', bgcolor: 'white', height: '100%' }}>
+              <TextField
+                variant="outlined"
+                placeholder="Search..."
+                fullWidth
+                size="small"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                sx={{
+                  mb: 2,
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: '8px',
+                    backgroundColor: '#fcf8f9',
+                    '& fieldset': { borderColor: '#e7d0d4' },
+                    '&:hover fieldset': { borderColor: '#e72b4d' },
+                    '&.Mui-focused fieldset': { borderColor: '#e72b4d' },
+                  },
+                  '& input': {
+                    color: '#1b0e10',
+                  },
+                }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon sx={{ color: '#974e5b' }} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <Typography variant="subtitle2" sx={{ color: '#974e5b', mb: 1, fontWeight: 'medium' }}>Basic Type</Typography>
+              <Select
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
+                displayEmpty
+                fullWidth
+                size="small"
+                sx={{
+                  mb: 3,
+                  borderRadius: '8px',
+                  backgroundColor: '#fcf8f9',
+                  '& .MuiOutlinedInput-notchedOutline': { borderColor: '#e7d0d4' },
+                  '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#e72b4d' },
+                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#e72b4d' },
+                  color: '#1b0e10',
+                }}
+              >
+                <MenuItem value="">All</MenuItem>
+                {types.map((type) => (
+                  <MenuItem key={type} value={type}>{type}</MenuItem>
+                ))}
+              </Select>
+              <Box sx={{ maxHeight: 'calc(100vh - 300px)', overflowY: 'auto', pr: 1 }}>
                 {sortedAndFilteredWords.slice(0, displayCount).map(word => (
                   <WordListItem key={word.word} word={word} onSelect={handleSelectWord} isLearned={!!progress[word.word]} />
                 ))}
                 {displayCount < sortedAndFilteredWords.length && (
-                  <div ref={loadingRef} className="text-center py-4">
-                    <div className="animate-spin inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full"></div>
-                    <p className="text-sm text-gray-500 mt-2">加载更多词汇...</p>
-                  </div>
+                  <Box ref={loadingRef} sx={{ textAlign: 'center', py: 2 }}>
+                    <CircularProgress size={24} sx={{ color: '#e72b4d' }} />
+                    <Typography variant="body2" sx={{ color: '#974e5b', mt: 1 }}>Loading more words...</Typography>
+                  </Box>
                 )}
                 {displayCount >= sortedAndFilteredWords.length && sortedAndFilteredWords.length > 0 && (
-                  <div className="text-center py-4 text-green-600">
-                    <span className="material-icons align-middle mr-1">check_circle_outline</span>所有词汇已加载。
-                  </div>
+                  <Box sx={{ textAlign: 'center', py: 2, color: '#268c60' }}>
+                    <CheckCircleOutlineIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
+                    <Typography variant="body2" component="span">All words loaded.</Typography>
+                  </Box>
                 )}
                 {sortedAndFilteredWords.length === 0 && (
-                  <div className="text-center py-4 text-gray-500">
-                    <span className="material-icons align-middle mr-1">info_outlined</span>没有找到匹配的词汇。
-                  </div>
+                  <Box sx={{ textAlign: 'center', py: 2, color: '#974e5b' }}>
+                    <InfoOutlinedIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
+                    <Typography variant="body2" component="span">No matching words found.</Typography>
+                  </Box>
                 )}
-              </div>
-            </div>
-          </aside>
-          <section className="w-full lg:w-2/3 xl:w-3/4 h-full">
-            <WordDetailDisplay word={selectedWord} />
-          </section>
-        </div>
-      </main>
-    </div>
+              </Box>
+            </Paper>
+          </Box>
+          <Box sx={{ width: { xs: '100%', lg: '66.66%', xl: '75%' } }}>
+            <VocabularyDetailView word={selectedWord} />
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
