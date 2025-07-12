@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kato-Pig Redesign</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<header class="bg-white border-b border-gray-200">
+<div class="container mx-auto px-6 py-3 flex justify-between items-center">
+<div class="flex items-center space-x-8">
+<h1 class="text-xl font-bold text-gray-900">Kato-Pig</h1>
+<nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+<a class="text-gray-600 hover:text-gray-900" href="#">首页</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">课程</a>
+<a class="text-gray-900 font-semibold border-b-2 border-indigo-500 pb-1" href="#">我的列表</a>
+<a class="text-gray-600 hover:text-gray-900" href="#">进度</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<span class="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
+<input class="bg-gray-100 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-48" placeholder="搜索..." type="text"/>
+</div>
+<button class="text-gray-500 hover:text-gray-700">
+<span class="material-icons">notifications</span>
+</button>
+<button class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-white font-bold">
+<img alt="User avatar" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsw9vogSVSwFNMyKxsh1G1Pncxrzm1fMYC0iNSJ10t9Zc758lcwTGWbQ1U8Usbw7oX7IeOO2Sv3KYklM_xg8kLzZmEsLsxz08Y2gO6oAVfEVuSyDH1towuoXNtpHuCKSol82TOmi6d56ILFVjdSUWlxs9-rVc6LdIhxccKssE6Pd1DKtiqd1GLRUbWPob24WkYxQ2mov4pdYWWuvbx6-AnKnGVirW7F0tUQezFcNT0gFt2ZHsnUSbLv1OMBSYhxKmU2thlPxOqnw"/>
+</button>
+</div>
+</div>
+</header>
+<main class="container mx-auto p-6">
+<div class="flex flex-col lg:flex-row gap-6">
+<aside class="w-full lg:w-1/3 xl:w-1/4">
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 h-full">
+<div class="relative mb-4">
+<span class="material-icons absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
+<input class="bg-gray-100 rounded-lg w-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="搜索列表..." type="text"/>
+</div>
+<div class="space-y-2 overflow-y-auto max-h-[calc(100vh-200px)] pr-2">
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">阿吽の呼吸</p>
+<p class="text-sm text-gray-500">心有灵犀</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">荷がたん</p>
+<p class="text-sm text-gray-500">没用的</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer bg-indigo-50 border-l-4 border-indigo-500">
+<div>
+<p class="font-medium text-indigo-600">あっという間に</p>
+<p class="text-sm text-indigo-500">转眼之间</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">いい加減にしなさい</p>
+<p class="text-sm text-gray-500">适可而止！</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">いい年をして</p>
+<p class="text-sm text-gray-500">一大把年纪了还...</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">いかなる場合でも</p>
+<p class="text-sm text-gray-500">任何情况下</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">行けない</p>
+<p class="text-sm text-gray-500">不能去</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">いらっしゃいませ</p>
+<p class="text-sm text-gray-500">欢迎光临</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">お世辞になる</p>
+<p class="text-sm text-gray-500">恭维</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">おいでやす</p>
+<p class="text-sm text-gray-500">欢迎光临 (京都方言)</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">お座なりになる</p>
+<p class="text-sm text-gray-500">敷衍了事</p>
+</div>
+</div>
+<div class="p-3 rounded-lg flex justify-between items-center cursor-pointer hover:bg-gray-50">
+<div>
+<p class="font-medium text-gray-800">お角に</p>
+<p class="text-sm text-gray-500">雪上加霜</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<section class="w-full lg:w-2/3 xl:w-3/4">
+<div class="bg-white rounded-xl border border-gray-200 shadow-sm">
+<div class="border-b border-gray-200">
+<nav aria-label="Tabs" class="-mb-px flex space-x-6 px-6">
+<button class="shrink-0 border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                                详情
+                            </button>
+<button class="shrink-0 border-b-2 border-indigo-500 px-1 py-4 text-sm font-medium text-indigo-600">
+                                评论
+                            </button>
+</nav>
+</div>
+<div class="p-6 hidden">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-4 mb-2">
+<h2 class="text-5xl font-bold text-gray-900">あっという間に</h2>
+<button class="text-gray-500 hover:text-indigo-600">
+<span class="material-icons text-3xl">volume_up</span>
+</button>
+</div>
+<p class="text-gray-600 text-lg">转眼之间；一瞬间；一眨眼的功夫</p>
+</div>
+<button class="flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-4 py-2 rounded-lg">
+<span class="material-icons text-base">edit</span>
+                                编辑
+                            </button>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-base font-semibold text-gray-800 mb-3">例句</h3>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-lg text-gray-900 mb-1">夏休みは<span class="font-bold text-indigo-600">あっという間に</span>終わった。</p>
+<p class="text-sm text-gray-600">暑假一眨眼就结束了。</p>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-lg text-gray-900 mb-1">彼は<span class="font-bold text-indigo-600">あっという間に</span>仕事を終えた。</p>
+<p class="text-sm text-gray-600">他一瞬间就完成了工作。</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-base font-semibold text-gray-800 mb-3">相关语法</h3>
+<div class="flex gap-2">
+<span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">副词</span>
+<span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">N2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-gray-900">评论 (23)</h3>
+<div class="flex items-center space-x-2 bg-gray-100 p-1 rounded-lg">
+<button class="px-3 py-1 text-sm font-semibold text-white bg-indigo-500 rounded-md shadow">最新</button>
+<button class="px-3 py-1 text-sm font-medium text-gray-600 hover:bg-gray-200 rounded-md">最热门</button>
+</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsw9vogSVSwFNMyKxsh1G1Pncxrzm1fMYC0iNSJ10t9Zc758lcwTGWbQ1U8Usbw7oX7IeOO2Sv3KYklM_xg8kLzZmEsLsxz08Y2gO6oAVfEVuSyDH1towuoXNtpHuCKSol82TOmi6d56ILFVjdSUWlxs9-rVc6LdIhxccKssE6Pd1DKtiqd1GLRUbWPob24WkYxQ2mov4pdYWWuvbx6-AnKnGVirW7F0tUQezFcNT0gFt2ZHsnUSbLv1OMBSYhxKmU2thlPxOqnw"/>
+<div class="flex-1">
+<textarea class="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="发表你的看法..." rows="3"></textarea>
+<div class="flex justify-end mt-2">
+<button class="bg-indigo-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors">发表</button>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<img alt="Commenter avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI9ANJUuXZFNDAnYz4DohwECNXnh2r6ZiNoPDWpuXIRcnbVshQ8E6RiBtb5Udw4Q9iOqAGD5GprC1Yym-rtykjYV77UKR2UKo071RVHdSGlJcuDQNnOKLaNeS1KL6lelzcy3VhgEUt4eksBecHGX_hw-U8Ou0ZlE9D6ST6nbQSyqfWe8oDfTkHQrtXZerAEQ7hcda9uR3zpfuRyIYpe-ew4AWZHeYQizUJGcrmo4sBALx7OltcNZ1esQRPLGlqdaJW1C-TDVnEcg"/>
+<div class="flex-1">
+<div class="bg-gray-100 p-4 rounded-lg rounded-tl-none">
+<div class="flex justify-between items-center">
+<div>
+<p class="font-semibold text-gray-900">田中 健</p>
+<p class="text-xs text-gray-500">2 小时前</p>
+</div>
+</div>
+<p class="text-gray-800 mt-2">这个解释太棒了！终于弄懂了「あっという間に」的用法。</p>
+</div>
+<div class="flex items-center space-x-4 mt-2 text-sm text-gray-500 pl-2">
+<button class="flex items-center space-x-1 hover:text-indigo-600 group">
+<span class="material-icons text-base">thumb_up_off_alt</span>
+<span class="group-hover:text-indigo-600">12</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-red-600 group">
+<span class="material-icons text-base">thumb_down_off_alt</span>
+<span class="group-hover:text-red-600">1</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-gray-900 font-semibold">
+<span class="material-icons text-base">reply</span>
+<span>回复</span>
+</button>
+</div>
+<div class="mt-4 ml-8 space-y-4">
+<div class="flex items-start space-x-4">
+<img alt="Replier avatar" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVe3AKMRRKLjPLHDAdsDhUUK9IP01KXSOtgoMcV6Mj93qylUyvey2ZQQY-tWDWoBqycOpU4j8zi7zHWTb3hLZfOvBHONe55WyF2MN0pW86UbTXobnFRRMbsWtCPv7-p_FtBnlsZENO6SDNLkbcoFRIWUDryTc_CAA5R9SdL23prk-Ela_3zWXBKYc9J-nF2V37up-9SxM9S2Y1Xhgc7qyavWTYMwh4beYtFS-fBIfltYRzI1M4oyrBkrgoZVw3Jtt56kUKB8R8qA"/>
+<div class="flex-1">
+<div class="bg-gray-100 p-3 rounded-lg rounded-tl-none">
+<p class="font-semibold text-gray-900 text-sm">佐藤 美咲</p>
+<p class="text-gray-800 mt-1 text-sm">同意！例句也很有帮助。</p>
+</div>
+<div class="flex items-center space-x-4 mt-2 text-xs text-gray-500 pl-2">
+<button class="flex items-center space-x-1 hover:text-indigo-600 group">
+<span class="material-icons text-sm">thumb_up_off_alt</span>
+<span class="group-hover:text-indigo-600">3</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-gray-900 font-semibold">
+<span class="material-icons text-sm">reply</span>
+<span>回复</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 my-6"></div>
+<div class="flex items-start space-x-4">
+<img alt="Commenter avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHNDEfWGl0UAfZ-HkzetNjqYxzcaPpvAHDhtKGOAePr1Lm0DuXi6UET4OrIMyb9k9XI2ylkJ_OkSCodCw7lgU1Mi9XLWXUdRiPfgE1Dd9n6DtYx9oPFBZ5fSQt3vWMDySPGNfpBEd2vC7kfruYGCN16zA4CDOVBlJy7F-u0YLWQWTolmNcCoS8STU47i0eJwh1fKwrLeaciJOT4BpCGYegci0iR5vlymut9ePO0rkzuEG9yDoTfzAOEYzVAVNMiXN14s3hD7nYVw"/>
+<div class="flex-1">
+<div class="bg-gray-100 p-4 rounded-lg rounded-tl-none">
+<p class="font-semibold text-gray-900">铃木 恵子</p>
+<p class="text-xs text-gray-500">5 小时前</p>
+<p class="text-gray-800 mt-2">我一直把它和「すぐに」搞混，现在清楚多了。</p>
+</div>
+<div class="flex items-center space-x-4 mt-2 text-sm text-gray-500 pl-2">
+<button class="flex items-center space-x-1 hover:text-indigo-600 group">
+<span class="material-icons text-base">thumb_up_off_alt</span>
+<span class="group-hover:text-indigo-600">8</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-red-600 group">
+<span class="material-icons text-base">thumb_down_off_alt</span>
+</button>
+<button class="flex items-center space-x-1 hover:text-gray-900 font-semibold">
+<span class="material-icons text-base">reply</span>
+<span>回复</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+</body></html>

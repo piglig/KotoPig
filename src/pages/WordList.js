@@ -173,9 +173,14 @@ const WordList = () => {
                   '& .MuiOutlinedInput-root': {
                     borderRadius: '8px',
                     backgroundColor: '#fcf8f9',
-                    '& fieldset': { borderColor: '#e7d0d4' },
-                    '&:hover fieldset': { borderColor: '#e72b4d' },
-                    '&.Mui-focused fieldset': { borderColor: '#e72b4d' },
+                    border: '1px solid #e7d0d4', // Apply border directly to the root
+                    '& .MuiOutlinedInput-notchedOutline': { borderColor: 'transparent' }, // Make fieldset border transparent
+                    '&:hover': {
+                      borderColor: '#e72b4d', // Change root border on hover
+                    },
+                    '&.Mui-focused': {
+                      borderColor: '#c92140', // Change root border on focus
+                    },
                   },
                   '& input': {
                     color: '#1b0e10',

@@ -1,20 +1,7 @@
 import React from 'react';
-import { Box, Typography, Chip } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const WordCard = ({ word, isSelected, onClick }) => {
-  // This is a placeholder. In a real app, you'd have a more robust way
-  // to determine the tag, likely from the data itself.
-  const getTag = () => {
-    if (!word || !word.part_of_speech) return null;
-    if (word.part_of_speech.includes('v5u')) return 'UPC';
-    if (word.part_of_speech.includes('v1')) return 'UPC';
-    if (word.part_of_speech.includes('adj-i')) return 'I';
-    if (word.part_of_speech.includes('adv')) return 'ADV';
-    if (word.part_of_speech.includes('n')) return 'H';
-    return 'UPC'; // Default
-  };
-
-  const tag = getTag();
 
   return (
     <Box
@@ -23,30 +10,29 @@ const WordCard = ({ word, isSelected, onClick }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        p: 2,
+        p: 1.5,
         cursor: 'pointer',
-        backgroundColor: isSelected ? '#FBEBEE' : '#fff',
-        border: '1px solid',
-        borderColor: isSelected ? '#E57373' : '#e8e8e8',
-        borderRadius: '12px',
-        mb: 1,
-        transition: 'background-color 150ms ease-in-out, border-color 150ms ease-in-out',
+        backgroundColor: isSelected ? '#fef3f2' : 'transparent',
+        borderLeft: isSelected ? '4px solid #e72b4d' : '4px solid transparent',
+        borderRadius: '8px',
+        mb: 0.5,
+        transition: 'all 150ms ease-in-out',
         '&:hover': {
-          backgroundColor: isSelected ? '#F8E5E7' : '#fafafa',
-          borderColor: isSelected ? '#E57373' : '#d0d0d0',
+          backgroundColor: isSelected ? '#fcf8f9' : '#f9fafb',
         },
       }}
     >
-      <Box>
+      <Box sx={{ minWidth: 0, flex: 1 }}>
         <Typography
           component="p"
           sx={{
-            color: isSelected ? '#c62828' : '#111518',
+            color: isSelected ? '#e72b4d' : '#111827',
             fontSize: '1rem',
-            fontWeight: 600,
+            fontWeight: 500,
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
+            lineHeight: 1.5
           }}
         >
           {word.japanese}
@@ -54,31 +40,19 @@ const WordCard = ({ word, isSelected, onClick }) => {
         <Typography
           component="p"
           sx={{
-            color: '#637988',
+            color: isSelected ? '#c92140' : '#6b7280',
             fontSize: '0.875rem',
             fontWeight: 400,
             lineHeight: '1.25rem',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
-            mt: 0.5,
+            mt: 0.25,
           }}
         >
           {word.english.split(';')[0]}
         </Typography>
       </Box>
-      {tag && (
-        <Chip 
-          label={tag}
-          size="small"
-          sx={{
-            ml: 2,
-            fontWeight: 'bold',
-            color: isSelected ? '#c62828' : '#555',
-            backgroundColor: isSelected ? 'rgba(229, 115, 115, 0.2)' : '#e0e0e0',
-          }}
-        />
-      )}
     </Box>
   );
 };
